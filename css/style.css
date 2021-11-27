@@ -1846,23 +1846,6 @@ ol {
 	padding-top: 30px;
 }
 
-.footer__about {
-	margin-bottom: 10px;
-}
-
-.footer__about .footer__logo {
-	margin-bottom: 10px;
-}
-
-.footer__about .footer__logo a {
-	display: inline-block;
-}
-
-.footer__about p {
-	color: #b7b7b7;
-	margin-bottom: 10px;
-}
-
 .footer__widget {
 	margin-bottom: 10px;
 }
@@ -1870,10 +1853,10 @@ ol {
 .footer__widget h6 {
 	color: #ffffff;
 	font-size: 15px;
-	font-weight: 700;
+	font-weight: 800;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .footer__widget ul li {
@@ -1900,7 +1883,7 @@ ol {
 	color: #3d3d3d;
 	background: transparent;
 	border: none;
-	padding: 15px 0;
+	padding: 5px 0;
 	border-bottom: 2px solid #ffffff;
 }
 
