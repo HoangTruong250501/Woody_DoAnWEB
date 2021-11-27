@@ -116,7 +116,7 @@ ol {
 }
 
 .section-title span {
-	color: #e53637;
+	color: #e09b05;
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -684,7 +684,7 @@ ol {
 
 .banner__item:hover .banner__item__text a:after {
 	width: 40px;
-	background: #e53637;
+	background: #e09b05;
 }
 
 .banner__item.banner__item--middle {
@@ -754,7 +754,6 @@ ol {
 -----------------------*/
 
 .categories {
-	background: #f3f2ee;
 	overflow: hidden;
 	padding-top: 150px;
 	padding-bottom: 125px;
@@ -823,7 +822,7 @@ ol {
 }
 
 .categories__deal__countdown span {
-	color: #e53637;
+	color: #05ac29;
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -908,7 +907,7 @@ ol {
 }
 
 .instagram__text h3 {
-	color: #e53637;
+	color: #e09b05;
 	font-weight: 700;
 }
 
@@ -2629,7 +2628,7 @@ ol {
 
 .blog__item:hover a::after {
 	width: 40px;
-	background: #e53637;
+	background: #e09b05;
 }
 
 .blog__item:hover .blog__item__text {
