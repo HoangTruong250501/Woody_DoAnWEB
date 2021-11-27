@@ -1244,21 +1244,27 @@ ol {
 	display: block;
 }
 
-.shop__sidebar__categories ul,
-.shop__sidebar__price ul,
-.shop__sidebar__brand ul {
+.shop__sidebar__bedroom ul,
+.shop__sidebar__kitchen ul,
+.shop__sidebar__kidroom ul,
+.shop__sidebar__guestroom ul,
+.shop__sidebar__bathroom ul {
 	height: 225px;
 }
 
-.shop__sidebar__categories ul li,
-.shop__sidebar__price ul li,
-.shop__sidebar__brand ul li {
+.shop__sidebar__bedroom ul li,
+.shop__sidebar__kitchen ul li,
+.shop__sidebar__kidroom ul li,
+.shop__sidebar__guestroom ul li,
+.shop__sidebar__bathroom ul li {
 	list-style: none;
 }
 
-.shop__sidebar__categories ul li a,
-.shop__sidebar__price ul li a,
-.shop__sidebar__brand ul li a {
+.shop__sidebar__bedroom ul li a,
+.shop__sidebar__kitchen ul li a,
+.shop__sidebar__kidroom ul li a,
+.shop__sidebar__guestroom ul li a,
+.shop__sidebar__bathroom ul li a {
 	color: #b7b7b7;
 	font-size: 15px;
 	line-height: 32px;
@@ -1267,138 +1273,28 @@ ol {
 	transition: all, 0.3s;
 }
 
-.shop__sidebar__categories ul li a:hover,
-.shop__sidebar__price ul li a:hover,
-.shop__sidebar__brand ul li a:hover {
+.shop__sidebar__bedroom ul li a:hover,
+.shop__sidebar__kitchen ul li a:hover,
+.shop__sidebar__kidroom ul li a:hover,
+.shop__sidebar__guestroom ul li a:hover,
+.shop__sidebar__bathroom ul li a:hover {
 	color: #111111;
 }
 
-.shop__sidebar__brand ul {
+.shop__sidebar__bathroom ul {
 	height: auto;
 }
 
-.shop__sidebar__price ul {
+.shop__sidebar__kitchen ul {
+	height: auto;
+}
+.shop__sidebar__kidroom ul {
+	height: auto;
+}
+.shop__sidebar__guestroom ul {
 	height: auto;
 }
 
-.shop__sidebar__size {
-	padding-top: 15px;
-}
-
-.shop__sidebar__size label {
-	color: #111111;
-	font-size: 15px;
-	font-weight: 700;
-	text-transform: uppercase;
-	display: inline-block;
-	border: 1px solid #e5e5e5;
-	padding: 6px 25px;
-	margin-bottom: 10px;
-	margin-right: 5px;
-	cursor: pointer;
-}
-
-.shop__sidebar__size label.active {
-	background: #111111;
-	color: #ffffff;
-	border-color: #111111;
-}
-
-.shop__sidebar__size label input {
-	position: absolute;
-	visibility: hidden;
-}
-
-.shop__sidebar__color {
-	padding-top: 15px;
-}
-
-.shop__sidebar__color label {
-	height: 30px;
-	width: 30px;
-	border-radius: 50%;
-	position: relative;
-	margin-right: 10px;
-	display: inline-block;
-	margin-bottom: 10px;
-	cursor: pointer;
-}
-
-.shop__sidebar__color label.c-1 {
-	background: #0b090c;
-}
-
-.shop__sidebar__color label.c-2 {
-	background: #20315f;
-}
-
-.shop__sidebar__color label.c-3 {
-	background: #f1af4d;
-}
-
-.shop__sidebar__color label.c-4 {
-	background: #636068;
-}
-
-.shop__sidebar__color label.c-5 {
-	background: #57594d;
-}
-
-.shop__sidebar__color label.c-6 {
-	background: #e8bac4;
-}
-
-.shop__sidebar__color label.c-7 {
-	background: #d6c1d7;
-}
-
-.shop__sidebar__color label.c-8 {
-	background: #ed1c24;
-}
-
-.shop__sidebar__color label.c-9 {
-	background: #ffffff;
-}
-
-.shop__sidebar__color label:after {
-	position: absolute;
-	left: -3px;
-	top: -3px;
-	height: 36px;
-	width: 36px;
-	border: 1px solid #e5e5e5;
-	content: "";
-	border-radius: 50%;
-}
-
-.shop__sidebar__color label input {
-	position: absolute;
-	visibility: hidden;
-}
-
-.shop__sidebar__tags {
-	padding-top: 15px;
-}
-
-.shop__sidebar__tags a {
-	color: #404040;
-	font-size: 13px;
-	font-weight: 700;
-	background: #f1f5f8;
-	padding: 5px 18px;
-	display: inline-block;
-	text-transform: uppercase;
-	margin-right: 6px;
-	margin-bottom: 10px;
-	-webkit-transition: all, 0.3s;
-	-o-transition: all, 0.3s;
-	transition: all, 0.3s;
-}
-
-.shop__sidebar__tags a:hover {
-	background: #111111;
-	color: #ffffff;
-}
 
 .shop__sidebar__accordion .card-heading a:after,
 .shop__sidebar__accordion .card-heading>a.active[aria-expanded=false]:after {
@@ -1947,15 +1843,15 @@ ol {
 
 .footer {
 	background: #111111;
-	padding-top: 70px;
+	padding-top: 30px;
 }
 
 .footer__about {
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .footer__about .footer__logo {
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .footer__about .footer__logo a {
@@ -1964,11 +1860,11 @@ ol {
 
 .footer__about p {
 	color: #b7b7b7;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .footer__widget {
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .footer__widget h6 {
@@ -2039,24 +1935,7 @@ ol {
 	border: none;
 }
 
-.footer__copyright__text {
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
-	padding: 20px 0;
-	margin-top: 40px;
-}
 
-.footer__copyright__text p {
-	color: #b7b7b7;
-	margin-bottom: 0;
-}
-
-.footer__copyright__text p i {
-	color: #e53637;
-}
-
-.footer__copyright__text p a {
-	color: #e53637;
-}
 
 /*---------------------
   Breadcrumb
