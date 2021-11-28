@@ -778,8 +778,8 @@ ol {
 
 .categories {
 	overflow: hidden;
-	padding-top: 150px;
-	padding-bottom: 125px;
+	padding-top: 100px;
+	padding-bottom: 80px;
 }
 
 .categories__text {
@@ -813,10 +813,6 @@ ol {
 .categories__hot__deal {
 	position: relative;
 	z-index: 5;
-}
-
-.categories__hot__deal img {
-	min-width: 100%;
 }
 
 .hot__deal__sticker {
