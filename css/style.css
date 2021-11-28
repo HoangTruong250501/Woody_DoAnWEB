@@ -799,15 +799,9 @@ ol {
 -----------------------*/
 
 .categories {
-<<<<<<< HEAD
     overflow: hidden;
-    padding-top: 150px;
-    padding-bottom: 125px;
-=======
-	overflow: hidden;
-	padding-top: 100px;
-	padding-bottom: 80px;
->>>>>>> dd8d5d16a37f8b8092335b4e54bf8dcc21b11fda
+    padding-top: 100px;
+    padding-bottom: 80px;
 }
 
 .categories__text {
@@ -843,13 +837,10 @@ ol {
     z-index: 5;
 }
 
-<<<<<<< HEAD
 .categories__hot__deal img {
     min-width: 100%;
 }
 
-=======
->>>>>>> dd8d5d16a37f8b8092335b4e54bf8dcc21b11fda
 .hot__deal__sticker {
     height: 100px;
     width: 100px;
