@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
 </head>
 
 <body>
@@ -30,57 +31,74 @@
         <div class="loader"></div>
     </div>
 
-    
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-3">
-                <div class="header__logo">
-                    <a href="./index.html"><img src="img/Woody.png" alt=""></a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <nav class="header__menu mobile-menu">
-                    <ul>
-                        <li ><a href="./index.html">Trang chủ</a></li>
-                        <li class="active"><a href="./shop.html">Sản phẩm</a>
-                            <ul class="dropdown">
-                                <li><a href="./shop-bedroom.html">Phòng ngủ</a></li>
-                                <li><a href="./shop-bathroom.html">Phòng tắm</a></li>
-                                <li><a href="./shop-kitchen.html">Phòng bếp</a></li>
-                                <li><a href="./shop-kidroom.html">Phòng trẻ em</a></li>
-                                <li><a href="./shop-guestroom.html">Phòng khách</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Bộ sưu tập</a>
-                            <ul class="dropdown">
-                                <li><a href="./about.html">Nhà hiện đại</a></li>
-                                <li><a href="./shop-details.html">Bộ sưu tập theo mùa</a></li>
-                                <li><a href="./shopping-cart.html">Bộ sưu tập đặc biệt</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./blog.html">Thực tế ảo</a>
-                            <ul class="dropdown">
-                                <li><a href="./about.html">Showroom ảo</a></li>
-                                <li><a href="./shop-details.html">Trải nghiệm sản phẩm</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./about.html">Giới thiệu</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-lg-3 col-md-3">
-                <div class="header__nav__option">
-                    <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                    <a href="#"><img src="img/icon/user.png" alt=""></a>
-                    <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                </div>
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__option">
+            <div class="offcanvas__links" style="margin-left:30px">
+                <a href="#" style="font-size: 30px;"><strong>W  O  O  D  Y</strong></a>
             </div>
         </div>
-        <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        <div class="offcanvas__nav__option">
+            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+            <a href="#"><img src="img/icon/user.png" alt=""></a>
+            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
     </div>
-</header>
-<!-- Header Section End -->
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/Woody.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="./index.html">Trang chủ</a></li>
+                            <li class="active"><a href="./shop.html">Sản phẩm</a>
+                                <ul class="dropdown">
+                                    <li><a href="./shop-bedroom.html">Phòng ngủ</a></li>
+                                    <li><a href="./shop-bathroom.html">Phòng tắm</a></li>
+                                    <li><a href="./shop-kitchen.html">Phòng bếp</a></li>
+                                    <li><a href="./shop-kidroom.html">Phòng trẻ em</a></li>
+                                    <li><a href="./shop-guestroom.html">Phòng khách</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Bộ sưu tập</a>
+                                <ul class="dropdown">
+                                    <li><a href="./about.html">Nhà hiện đại</a></li>
+                                    <li><a href="./shop-details.html">Bộ sưu tập theo mùa</a></li>
+                                    <li><a href="./shopping-cart.html">Bộ sưu tập đặc biệt</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./blog.html">Thực tế ảo</a>
+                                <ul class="dropdown">
+                                    <li><a href="./about.html">Showroom ảo</a></li>
+                                    <li><a href="./shop-details.html">Trải nghiệm sản phẩm</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./about.html">Giới thiệu</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__nav__option">
+                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                        <a href="#"><img src="img/icon/user.png" alt=""></a>
+                        <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+    <!-- Header Section End -->
 
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-option">
@@ -673,10 +691,10 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div style="margin-right: -70px;" class="col-lg-4 col-md-3 col-sm-6">
-                    <div class="footer__widget">
+                <div  class="col-lg-3 col-md-4 col-sm-4">
+                    <div  class="footer__widget">
                         <h6>Thương hiệu Woody</h6>
-                        <div class="row">
+                        <div style="margin-right: -100px;" class="row">
                             <div class="col-lg-4">
                                 <ul>
                                     <li><a href="#">Về chúng tôi</a></li>
@@ -685,7 +703,7 @@
                                     <li><a href="#">Phòng bếp</a></li>
                                 </ul>
                             </div>
-                            <div class="col-lg-4 ">
+                            <div class="col-lg-4">
                                 <ul>
                                     <li><a href="#">Phòng trẻ em</a></li>
                                     <li><a href="#">Phòng khách</a></li>
@@ -758,6 +776,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>
