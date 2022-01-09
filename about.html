@@ -9,6 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Woody | Giới Thiệu</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
     <!-- Google Font -->
 
     <link rel="icon" href=" https://img.icons8.com/ios-filled/50/000000/circled-w.png " />
@@ -31,72 +33,10 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
-    <!-- Offcanvas Menu Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__option">
-            <div class="offcanvas__links" style="margin-left:30px">
-                <a href="#" style="font-size: 30px;"><strong>W  O  O  D  Y</strong></a>
-            </div>
-        </div>
-        <div class="offcanvas__nav__option">
-            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-            <a href="#"><img src="img/icon/user.png" alt=""></a>
-            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-        </div>
-        <div id="mobile-menu-wrap"></div>
-    </div>
-    <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="img/Woody.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <nav class="header__menu mobile-menu">
-                        <ul>
-                            <li><a href="./index.html">Trang chủ</a></li>
-                            <li><a href="./shop.html">Sản phẩm</a>
-                                <ul class="dropdown">
-                                    <li><a href="./shop-bedroom.html">Phòng ngủ</a></li>
-                                    <li><a href="./shop-bathroom.html">Phòng tắm</a></li>
-                                    <li><a href="./shop-kitchen.html">Phòng bếp</a></li>
-                                    <li><a href="./shop-kidroom.html">Phòng trẻ em</a></li>
-                                    <li><a href="./shop-guestroom.html">Phòng khách</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Bộ sưu tập</a>
-                                <ul class="dropdown">
-                                    <li><a href="./about.html">Nhà hiện đại</a></li>
-                                    <li><a href="./shop-details.html">Bộ sưu tập theo mùa</a></li>
-                                    <li><a href="./shopping-cart.html">Bộ sưu tập đặc biệt</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./blog.html">Thực tế ảo</a>
-                                <ul class="dropdown">
-                                    <li><a href="./about.html">Showroom ảo</a></li>
-                                    <li><a href="./shop-details.html">Trải nghiệm sản phẩm</a></li>
-                                </ul>
-                            </li>
-                            <li class="active"><a href="./about.html">Giới thiệu</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__nav__option">
-                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                        <a href="#"><img src="img/icon/user.png" alt=""></a>
-                        <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="canvas__open"><i class="fa fa-bars"></i></div>
-        </div>
+        <div id="header"></div>    
     </header>
     <!-- Header Section End -->
 
@@ -311,11 +251,6 @@
     </div>
     <!-- End Slider -->
 
-
-
-
-
-
     <!-- Team Section Begin -->
     <section class="team spad" style="background-color:#ffffff">
         <div class="container">
@@ -327,47 +262,56 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-2 col-md-6 col-sm-6" style="margin:auto">
+            <div class="row" id="kq">
+                <!-- <div class="col-lg-2 col-md-6 col-sm-6" style="margin:auto">
                     <div class="team__item">
                         <img src="img/mongW.png" alt="">
-                        <h4 style="text-align: center;">Thanh Mộng</h4>
-
+                        <h4 >Thanh Mộng</h4>
+                        <span>Quản lý</span>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6" style="margin:auto">
                     <div class="team__item">
                         <img src="img/hoangW.png" alt="">
-                        <h4 style="text-align: center;">Nhật Hoàng</h4>
+                        <h4>Nhật Hoàng</h4>
+                        <span>Quản lý</span>
+
 
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6" style="margin:auto">
                     <div class="team__item">
                         <img src="img/nhungW.png" alt="">
-                        <h4 style="text-align: center;">Hồng Nhung</h4>
+                        <h4 >Hồng Nhung</h4>
+                        <span>Quản lý</span>
+
 
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6" style="margin:auto">
                     <div class="team__item">
                         <img src="img/taiW.png" alt="">
-                        <h4 style="text-align: center;">Trí Tài</h4>
+                        <h4>Trí Tài</h4>
+                        <span>Quản lý</span>
+
 
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6" style="margin:auto">
                     <div class="team__item">
                         <img src="img/vuW.png" alt="">
-                        <h4 style="text-align: center;">Tấn Vũ</h4>
+                        <h4>Tấn Vũ</h4>
+                        <span>Quản lý</span>
+
 
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
     <!-- Team Section End -->
 
+<<<<<<< HEAD
      <!-- Footer Section Begin -->
      <footer class="footer">
         <div class="container">
@@ -431,19 +375,13 @@
                 </div>
             </div>
         </div>
+=======
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div id="footer"></div>    
+>>>>>>> 4070c050f1152045128345157e57f3193c664c11
     </footer>
     <!-- Footer Section End -->
-
-    <!-- Search Begin -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
-            </form>
-        </div>
-    </div>
-    <!-- Search End -->
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -456,6 +394,31 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $(function() {
+        $('#header').load('reuseheader.html');
+        $('#footer').load('reusefooter.html');
+        });
+    </script>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "xml/thanhvien.xml", true);
+        var html = "";
+        var kq = document.getElementById("kq");
+        xhr.onreadystatechange = function() {
+                var xmlDoc = xhr.responseXML;
+                var x = xmlDoc.getElementsByTagName("thanhvien");
+                for (i = 0; i < x.length; i++) {
+
+                    html += " <div class='col-lg-2 col-md-6 col-sm-6' style='margin:auto' > <div class='team__item'><img src='" + x[i].getElementsByTagName("hinh")[0].childNodes[0].nodeValue + "'><h4>" + x[i].getElementsByTagName("hoTen")[0].childNodes[0].nodeValue + "</h4><span>" + x[i].getElementsByTagName("moTa")[0].childNodes[0].nodeValue + "</span></div> </div>";
+
+                }
+
+            
+            kq.innerHTML = html;
+        }
+        xhr.send();
+    </script>
 </body>
 
 </html>

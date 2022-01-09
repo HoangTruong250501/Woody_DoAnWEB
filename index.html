@@ -9,6 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Woody | HomePage</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
     rel="stylesheet">
@@ -29,72 +31,10 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
-    <!-- Offcanvas Menu Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__option">
-            <div class="offcanvas__links" style="margin-left:30px">
-                <a href="#" style="font-size: 30px;"><strong>W  O  O  D  Y</strong></a>
-            </div>
-        </div>
-        <div class="offcanvas__nav__option">
-            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-            <a href="#"><img src="img/icon/user.png" alt=""></a>
-            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-        </div>
-        <div id="mobile-menu-wrap"></div>
-    </div>
-    <!-- Offcanvas Menu End -->
-
+    
     <!-- Header Section Begin -->
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="img/Woody.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <nav class="header__menu mobile-menu">
-                        <ul>
-                            <li class="active"><a href="./index.html">Trang chủ</a></li>
-                            <li><a href="./shop.html">Sản phẩm</a>
-                                <ul class="dropdown">
-                                    <li><a href="./shop-bedroom.html">Phòng ngủ</a></li>
-                                    <li><a href="./shop-bathroom.html">Phòng tắm</a></li>
-                                    <li><a href="./shop-kitchen.html">Phòng bếp</a></li>
-                                    <li><a href="./shop-kidroom.html">Phòng trẻ em</a></li>
-                                    <li><a href="./shop-guestroom.html">Phòng khách</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Bộ sưu tập</a>
-                                <ul class="dropdown">
-                                    <li><a href="./about.html">Nhà hiện đại</a></li>
-                                    <li><a href="./shop-details.html">Bộ sưu tập theo mùa</a></li>
-                                    <li><a href="./shopping-cart.html">Bộ sưu tập đặc biệt</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./blog.html">Thực tế ảo</a>
-                                <ul class="dropdown">
-                                    <li><a href="./about.html">Showroom ảo</a></li>
-                                    <li><a href="./shop-details.html">Trải nghiệm sản phẩm</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./about.html">Giới thiệu</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__nav__option">
-                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                        <a href="#"><img src="img/icon/user.png" alt=""></a>
-                        <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="canvas__open"><i class="fa fa-bars"></i></div>
-        </div>
+        <div id="header"></div>    
     </header>
     <!-- Header Section End -->
 
@@ -736,6 +676,7 @@
     </section>
     <!-- Categories Section End -->
 
+<<<<<<< HEAD
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="container">
@@ -812,6 +753,13 @@
         </div>
     </div>
     <!-- Search End -->
+=======
+        <!-- Footer Section Begin -->
+        <footer class="footer">
+            <div id="footer"></div>    
+        </footer>
+        <!-- Footer Section End -->
+>>>>>>> 4070c050f1152045128345157e57f3193c664c11
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -824,6 +772,12 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $(function() {
+        $('#header').load('reuseheader.html');
+        $('#footer').load('reusefooter.html');
+        });
+        </script>
 </body>
 
 </html>
