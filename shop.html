@@ -3,9 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Male_Fashion Template">
-    <meta name="keywords" content="Male_Fashion, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Woody | Shop</title>
 
@@ -90,7 +88,7 @@
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
                         <a href="#"><img src="img/icon/user.png" alt=""></a>
-                        <a href="shopping-cart.html"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+                        <a href="shopping-cart.html"><img src="img/icon/cart.png" alt=""> <span id = "cart-count-info"></span></a>
                     </div>
                 </div>
             </div>
@@ -124,9 +122,9 @@
                 <div class="col-lg-3">
                     <div class="shop__sidebar">
                         <div class="shop__sidebar__search">
-                            <form action="#">
-                                <input type="text" placeholder="Tìm kiếm...">
-                                <button type="submit"><span class="icon_search"></span></button>
+                            <form action="" onsubmit="return false">
+                                <input type="text" id="search" placeholder="Tìm kiếm...">
+                                <!-- <button type="submit"><span class="icon_search"></span></button> -->
                             </form>
                         </div>
                         <div class="shop__sidebar__accordion">
@@ -139,11 +137,11 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__bedroom">
                                                 <ul style="margin-bottom: -70px;" class="nice-scroll">
-                                                    <li><a href="#">Giường</a></li>
-                                                    <li><a href="#">Bàn đầu giường</a></li>
-                                                    <li><a href="#">Gương</a></li>
-                                                    <li><a href="#">Đèn ngủ</a></li>
-                                                    <li><a href="#">Tủ quần áo</a></li>
+                                                    <li><a href="#" class="btn" data-filter="giuong">Giường</a></li>
+                                                    <li><a href="#" class="btn" data-filter="bandaugiuong">Bàn đầu giường</a></li>
+                                                    <li><a href="#" class="btn" data-filter="guong_ngu">Gương</a></li>
+                                                    <li><a href="#" class="btn" data-filter="denngu">Đèn ngủ</a></li>
+                                                    <li><a href="#" class="btn" data-filter="tuquanao">Tủ quần áo</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -157,10 +155,10 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__bathroom">
                                                 <ul>
-                                                    <li><a href="#">Bàn trang điểm</a></li>
-                                                    <li><a href="#">Vòi hoa sen</a></li>
-                                                    <li><a href="#">Bồn tắm</a></li>
-                                                    <li><a href="#">Gương</a></li>
+                                                    <li><a href="#" class="btn" data-filter="bantrangdiem">Bàn trang điểm</a></li>
+                                                    <li><a href="#" class="btn" data-filter="voihoasen">Vòi hoa sen</a></li>
+                                                    <li><a href="#" class="btn" data-filter="bontam">Bồn tắm</a></li>
+                                                    <li><a href="#" class="btn" data-filter="guong_tam">Gương</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -174,10 +172,10 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__kitchen">
                                                 <ul>
-                                                    <li><a href="#">Bàn ăn</a></li>
-                                                    <li><a href="#">Bồn rửa</a></li>
-                                                    <li><a href="#">Đèn</a></li>
-                                                    <li><a href="#">Tủ chén</a></li>
+                                                    <li><a href="#" class="btn" data-filter="banan">Bàn ăn</a></li>
+                                                    <li><a href="#" class="btn" data-filter="bonrua">Bồn rửa</a></li>
+                                                    <li><a href="#" class="btn" data-filter="den">Đèn</a></li>
+                                                    <li><a href="#" class="btn" data-filter="tuchen">Tủ chén</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -191,11 +189,11 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__kidroom">
                                                 <ul>
-                                                    <li><a href="#">Giường</a></li>
-                                                    <li><a href="#">Bàn/Ghế</a></li>
-                                                    <li><a href="#">Tủ</a></li>
-                                                    <li><a href="#">Dụng cụ trang trí</a></li>
-                                                    <li><a href="#">Đèn</a></li>
+                                                    <li><a href="#" class="btn" data-filter="giuong_treem">Giường</a></li>
+                                                    <li><a href="#" class="btn" data-filter="ban_treem">Bàn/Ghế</a></li>
+                                                    <li><a href="#" class="btn" data-filter="tu_treem">Tủ</a></li>
+                                                    <li><a href="#" class="btn" data-filter="trangtri">Dụng cụ trang trí</a></li>
+                                                    <li><a href="#" class="btn" data-filter="den_treem">Đèn</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -209,11 +207,11 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__guestroom">
                                                 <ul>
-                                                    <li><a href="#">Sofa</a></li>
-                                                    <li><a href="#">Tủ TV</a></li>
-                                                    <li><a href="#">Armchair</a></li>
-                                                    <li><a href="#">Bàn nước</a></li>
-                                                    <li><a href="#">Ghế massage</a></li>
+                                                    <li><a href="#" class="btn" data-filter="sofa">Sofa</a></li>
+                                                    <li><a href="#" class="btn" data-filter="tuTV">Tủ TV</a></li>
+                                                    <li><a href="#" class="btn" data-filter="armchair">Armchair</a></li>
+                                                    <li><a href="#" class="btn" data-filter="bannuoc">Bàn nước</a></li>
+                                                    <li><a href="#" class="btn" data-filter="ghemassage">Ghế massage</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -236,18 +234,19 @@
                                 <div class="shop__product__option__right">
                                     <p>Sắp xếp theo giá:</p>
                                     <select>
-                                        <option value="">Thấp đến cao</option>
-                                        <option value="">1.000.000 - 10.000.000</option>
-                                        <option value="">Trên 10.000.0000</option>
+                                        <option value="Default">Mặc định</option>
+                                        <option value="LowToHigh">Thấp đến cao</option>
+                                        <option value="HighToLow">Cao đến thấp</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="store-products">
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/bedroom_iris_1m8.jpg">
+                            <div class="product__item giuong">
+                                <div class="product__item__pic">
+                                    <img class="product__item__pic set-bg" src="/img/product/bedroom_iris_1m8.jpg"/>
                                     <ul class="product__hover">
                                         <li>
                                             <a href="#"><img src="img/icon/heart.png" alt=""></a>
@@ -286,8 +285,9 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item sale">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/kitchen_miami_1m7.jpg">
+                            <div class="product__item sale banan">
+                                <div class="product__item__pic">
+                                <img class="product__item__pic set-bg" src="/img/product/kitchen_miami_1m7.jpg"/>    
                                     <span class="label">Sale</span>
                                     <ul class="product__hover">
                                         <li>
@@ -326,8 +326,9 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/armchair_brown.jpg">
+                            <div class="product__item armchair">
+                                <div class="product__item__pic">
+                                    <img class="product__item__pic set-bg" src="img/product/armchair_brown.jpg"/>
                                     <ul class="product__hover">
                                         <li>
                                             <a href="#"><img src="img/icon/heart.png" alt=""></a>
@@ -366,8 +367,9 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item sale">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/elegance_black.jpg">
+                            <div class="product__item sale tuTV">
+                                <div class="product__item__pic">
+                                    <img class="product__item__pic set-bg" src="img/product/elegance_black.jpg"/>    
                                     <span class="label">Sale</span>
                                     <ul class="product__hover">
                                         <li>
@@ -407,8 +409,9 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/bedroom_austin_1m8.jpg">
+                            <div class="product__item giuong">
+                                <div class="product__item__pic">
+                                    <img class="product__item__pic set-bg" src="img/product/bedroom_austin_1m8.jpg"/>   
                                     <ul class="product__hover">
                                         <li>
                                             <a href="#"><img src="img/icon/heart.png" alt=""></a>
@@ -447,8 +450,9 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/armchair_garbo.jpg">
+                            <div class="product__item armchair">
+                                <div class="product__item__pic">
+                                    <img class="product__item__pic set-bg" src="img/product/armchair_garbo.jpg"/>  
                                     <ul class="product__hover">
                                         <li>
                                             <a href="#"><img src="img/icon/heart.png" alt=""></a>
@@ -487,8 +491,9 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/savona.jpg">
+                            <div class="product__item den">
+                                <div class="product__item__pic">
+                                    <img class="product__item__pic set-bg" src="img/product/savona.jpg"/> 
                                     <ul class="product__hover">
                                         <li>
                                             <a href="#"><img src="img/icon/heart.png" alt=""></a>
@@ -527,8 +532,9 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item sale">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/opera.jpg">
+                            <div class="product__item sale tuchen">
+                                <div class="product__item__pic">
+                                    <img class="product__item__pic set-bg" src="img/product/opera.jpg"/> 
                                     <span class="label">Sale</span>
                                     <ul class="product__hover">
                                         <li>
@@ -568,8 +574,9 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/miami_21004.jpg">
+                            <div class="product__item tuTV">
+                                <div class="product__item__pic">
+                                    <img class="product__item__pic set-bg" src="img/product/miami_21004.jpg"/> 
                                     <ul class="product__hover">
                                         <li>
                                             <a href="#"><img src="img/icon/heart.png" alt=""></a>
@@ -608,8 +615,9 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item sale">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/sofa_beige.jpg">
+                            <div class="product__item sale sofa">
+                                <div class="product__item__pic">
+                                    <img class="product__item__pic set-bg" src="img/product/sofa_beige.jpg"/> 
                                     <span class="label">Sale</span>
                                     <ul class="product__hover">
                                         <li>
@@ -649,8 +657,9 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/kitchen_bridge_1m6.jpg">
+                            <div class="product__item banan">
+                                <div class="product__item__pic">
+                                    <img class="product__item__pic set-bg" src="img/product/kitchen_bridge_1m6.jpg"/> 
                                     <ul class="product__hover">
                                         <li>
                                             <a href="#"><img src="img/icon/heart.png" alt=""></a>
@@ -689,8 +698,9 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/sofa_elegance.jpg">
+                            <div class="product__item sofa">
+                                <div class="product__item__pic">
+                                    <img class="product__item__pic set-bg" src="img/product/sofa_elegance.jpg"/> 
                                     <ul class="product__hover">
                                         <li>
                                             <a href="#"><img src="img/icon/heart.png" alt=""></a>
@@ -744,6 +754,98 @@
             </div>
         </div>
     </section>
+    <table>
+        <thead>
+            <tr>
+                <th>Sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Số tiền</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="product__cart__item">
+                    <div class="product__cart__item__pic">
+                        <img src="img/product/kitchen_bridge_1m6.jpg" alt="">
+                    </div>
+                    <div class="product__cart__item__text">
+                        <h6>Sofa Bridge 3 chỗ hiện đại da Beige</h6>
+                        <h5 class="productTotal">38,250,000₫</h5>
+                    </div>
+                </td>
+                <td class="quantity__item">
+                    <div class="quantity">
+                        <div class="pro-qty-2">
+                            <input type="text" value="1">
+                        </div>
+                    </div>
+                </td>
+                <td class="cart__price">38250000</td>
+                <td class="cart__close"><i class="fa fa-close"></i></td>
+            </tr>
+            <tr>
+                <td class="product__cart__item">
+                    <div class="product__cart__item__pic">
+                        <img src="img/product/bedroom_austin_1m8.jpg" alt="">
+                    </div>
+                    <div class="product__cart__item__text">
+                        <h6>Giường ngủ Austin 1m8 Da Brown</h6>
+                        <h5 class="productTotal">98,000,000₫</h5>
+                    </div>
+                </td>
+                <td class="quantity__item">
+                    <div class="quantity">
+                        <div class="pro-qty-2">
+                            <input type="text" value="1">
+                        </div>
+                    </div>
+                </td>
+                <td class="cart__price">98000000</td>
+                <td class="cart__close"><i class="fa fa-close"></i></td>
+            </tr>
+            <tr>
+                <td class="product__cart__item">
+                    <div class="product__cart__item__pic">
+                        <img src="img/product/sofa_beige.jpg" alt="">
+                    </div>
+                    <div class="product__cart__item__text">
+                        <h6>Sofa Bridge 3 chỗ hiện đại da Beige</h6>
+                        <h5 class="productTotal">84,915,000₫</h5>
+                    </div>
+                </td>
+                <td class="quantity__item">
+                    <div class="quantity">
+                        <div class="pro-qty-2">
+                            <input type="text" value="1">
+                        </div>
+                    </div>
+                </td>
+                <td class="cart__price">84915000</td>
+                <td class="cart__close"><i class="fa fa-close"></i></td>
+            </tr>
+            <tr>
+                <td class="product__cart__item">
+                    <div class="product__cart__item__pic">
+                        <img src="img/product/elegance_black.jpg" alt="">
+                    </div>
+                    <div class="product__cart__item__text">
+                        <h6>Tủ TV Elegance màu đen</h6>
+                        <h5 class="productTotal">42,636,000₫</h5>
+                    </div>
+                </td>
+                <td class="quantity__item">
+                    <div class="quantity">
+                        <div class="pro-qty-2">
+                            <input type="text" value="2">
+                        </div>
+                    </div>
+                </td>
+                <td class="cart__price">85272000</td>
+                <td class="cart__close"><i class="fa fa-close"></i></td>
+            </tr>
+        </tbody>
+    </table>
     <!-- Shop Section End -->
 
     <!-- Footer Section Begin -->
@@ -835,6 +937,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 

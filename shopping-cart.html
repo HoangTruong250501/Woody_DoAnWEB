@@ -3,9 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Male_Fashion Template">
-    <meta name="keywords" content="Male_Fashion, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Woody | Giỏ hàng</title>
 
@@ -23,7 +20,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
-<body>
+<body onload="addCart()">
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -131,7 +128,7 @@
                                     <th></th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="cart_product">
                                 <tr>
                                     <td class="product__cart__item">
                                         <div class="product__cart__item__pic">
@@ -139,7 +136,7 @@
                                         </div>
                                         <div class="product__cart__item__text">
                                             <h6>Sofa Bridge 3 chỗ hiện đại da Beige</h6>
-                                            <h5>38,250,000₫</h5>
+                                            <h5 class="productTotal">38,250,000₫</h5>
                                         </div>
                                     </td>
                                     <td class="quantity__item">
@@ -149,7 +146,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="cart__price">38,250,000₫</td>
+                                    <td class="cart__price">38250000</td>
                                     <td class="cart__close"><i class="fa fa-close"></i></td>
                                 </tr>
                                 <tr>
@@ -159,7 +156,7 @@
                                         </div>
                                         <div class="product__cart__item__text">
                                             <h6>Giường ngủ Austin 1m8 Da Brown</h6>
-                                            <h5>98,000,000₫</h5>
+                                            <h5 class="productTotal">98,000,000₫</h5>
                                         </div>
                                     </td>
                                     <td class="quantity__item">
@@ -169,7 +166,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="cart__price">98,000,000₫</td>
+                                    <td class="cart__price">98000000</td>
                                     <td class="cart__close"><i class="fa fa-close"></i></td>
                                 </tr>
                                 <tr>
@@ -179,7 +176,7 @@
                                         </div>
                                         <div class="product__cart__item__text">
                                             <h6>Sofa Bridge 3 chỗ hiện đại da Beige</h6>
-                                            <h5>84,915,000₫</h5>
+                                            <h5 class="productTotal">84,915,000₫</h5>
                                         </div>
                                     </td>
                                     <td class="quantity__item">
@@ -189,7 +186,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="cart__price">84,915,000₫</td>
+                                    <td class="cart__price">84915000</td>
                                     <td class="cart__close"><i class="fa fa-close"></i></td>
                                 </tr>
                                 <tr>
@@ -199,7 +196,7 @@
                                         </div>
                                         <div class="product__cart__item__text">
                                             <h6>Tủ TV Elegance màu đen</h6>
-                                            <h5>42,636,000₫</h5>
+                                            <h5 class="productTotal">42,636,000₫</h5>
                                         </div>
                                     </td>
                                     <td class="quantity__item">
@@ -209,7 +206,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="cart__price">85,272,000₫</td>
+                                    <td class="cart__price">85272000</td>
                                     <td class="cart__close"><i class="fa fa-close"></i></td>
                                 </tr>
                             </tbody>
@@ -239,11 +236,11 @@
                     <div class="cart__total">
                         <h5>Tổng giỏ hàng</h5>
                         <ul>
-                            <li>Tổng tiền hàng: <span>$ 169.50</span></li>
-                            <li>Phí vận chuyển: <span>$ 169.50</span></li>
-                            <li>Tổng thanh toán:<span>$ 169.50</span></li>
+                            <li>Tổng tiền hàng: <span class="cart__total_price">0₫</span></li>
+                            <li>Phí vận chuyển: <span>Miễn phí</span></li>
+                            <li>Tổng thanh toán:<span class="cart__total_price_ship">0₫</span></li>
                         </ul>
-                        <a href="#" class="primary-btn">Mua hàng</a>
+                        <a href="checkoutorder.html" class="primary-btn">Mua hàng</a>
                     </div>
                 </div>
             </div>
@@ -341,5 +338,17 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+<script>
+    function addCart(){
+        console.log(localStorage.getItem('product'))
+        var cartTable = document.querySelector('.cart_product')
+        console.log(cartTable)
+        const item = localStorage.getItem('product')
+        var currentHtml = cartTable.innerHTML;
+        currentHtml+= item
+        cartTable.innerHTML = currentHtml
+    }
+
+</script>
 
 </html>

@@ -1,12 +1,3 @@
-/*  ---------------------------------------------------
-    Template Name: Male Fashion
-    Description: Male Fashion - ecommerce teplate
-    Author: Colorib
-    Author URI: https://www.colorib.com/
-    Version: 1.0
-    Created: Colorib
----------------------------------------------------------  */
-
 'use strict';
 
 (function ($) {
@@ -139,7 +130,7 @@
     }
     var timerdate = mm + '/' + dd + '/' + yyyy;
 
-    var timerdate = "2021/12/24"
+    var timerdate = "2022/2/1"
 
     $("#countdown").countdown(timerdate, function (event) {
         $(this).html(event.strftime("<div class='cd-item'><span>%D</span> <p>Ngày</p> </div>" + "<div class='cd-item'><span>%H</span> <p>Giờ</p> </div>" + "<div class='cd-item'><span>%M</span> <p>Phút</p> </div>" + "<div class='cd-item'><span>%S</span> <p>Giây</p> </div>"));
@@ -155,25 +146,6 @@
     /*-------------------
 		Quantity change
 	--------------------- */
-    var proQty = $('.pro-qty');
-    proQty.prepend('<span class="fa fa-angle-up dec qtybtn"></span>');
-    proQty.append('<span class="fa fa-angle-down inc qtybtn"></span>');
-    proQty.on('click', '.qtybtn', function () {
-        var $button = $(this);
-        var oldValue = $button.parent().find('input').val();
-        if ($button.hasClass('inc')) {
-            var newVal = parseFloat(oldValue) + 1;
-        } else {
-            // Don't allow decrementing below zero
-            if (oldValue > 0) {
-                var newVal = parseFloat(oldValue) - 1;
-            } else {
-                newVal = 0;
-            }
-        }
-        $button.parent().find('input').val(newVal);
-    });
-
     var proQty = $('.pro-qty-2');
     proQty.prepend('<span class="fa fa-angle-left dec qtybtn"></span>');
     proQty.append('<span class="fa fa-angle-right inc qtybtn"></span>');
@@ -183,15 +155,56 @@
         if ($button.hasClass('inc')) {
             var newVal = parseFloat(oldValue) + 1;
         } else {
-            // Don't allow decrementing below zero
-            if (oldValue > 0) {
+            if (oldValue > 1) {
                 var newVal = parseFloat(oldValue) - 1;
             } else {
-                newVal = 0;
+                newVal = 1;
             }
         }
         $button.parent().find('input').val(newVal);
+        cartTotal();
     });
+    // Total price
+    function cartTotal(){
+        var cartItem = document.querySelectorAll('.shopping__cart__table tbody tr')
+        var totalCart = 0
+        var total
+        for (var i = 0; i<cartItem.length; i++){
+            var inputValue = cartItem[i].querySelector('.pro-qty-2 input').value
+            var productPrice = cartItem[i].querySelector('.cart__price').innerHTML
+             total = inputValue * parseFloat (productPrice)
+            totalCart = totalCart + total
+        }
+        var cartTotalSet = document.querySelector('.cart__total_price')
+        cartTotalSet.innerHTML = totalCart.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "₫";
+        var cartTotalSet1 = document.querySelector('.cart__total_price_ship')
+        cartTotalSet1.innerHTML = totalCart.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "₫";
+    }
+    
+    //Add to cart
+    const btn = document.querySelectorAll('.add-cart')
+    btn.forEach(function(a, index){ 
+        a.addEventListener("click", function(event){
+            var btnItem = event.target
+            var product = btnItem.parentElement.parentElement
+            var productImage = product.querySelector('img').src
+            var productName = product.querySelector("H6").innerText
+            var productPrice = product.querySelector("H5").innerText
+            var addtr = document.createElement("tr")
+            var trContent = '<tr><td class="product__cart__item"><div class="product__cart__item__pic"><img src="'+productImage+'" alt=""></div><div class="product__cart__item__text"><h6>'+productName+'</h6><h5 class="productTotal">'+productPrice+'</h5></div></td><td class="quantity__item"><div class="quantity"><div class="pro-qty-2"><input type="text" value="1"></div></div></td><td class="cart__price">38250000</td><td class="cart__close"><i class="fa fa-close"></i></td></tr>'
+            addtr.innerHTML = trContent
+            let htmls = '<tr>' + trContent +'</tr>'
+            localStorage.setItem('product',htmls)
+            console.log(localStorage.getItem('product')) 
+        })
+    })
+    // function addCart(){
+    //     console.log(localStorage.getItem('product'))
+    //     var cartTable = document.querySelector('.cart_product')
+    //     console.log(cartTable)
+    //     const item = localStorage.getItem('product')
+    //     cartTable.append(item)
+    // }
 
     /*------------------
         Achieve Counter
