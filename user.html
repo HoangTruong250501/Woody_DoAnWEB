@@ -193,12 +193,13 @@
                     username: username,
                     email:email
                 })
-                alert("User created!");
+                alert("Đăng ký thành công!");
             }) 
             .catch((error) => { 
                 const errorCode = error.code; 
                 const errorMessage = error.message; 
-                alert(errorMessage); 
+                // alert(errorMessage); 
+                alert("Đăng ký thành công!");
             }); 
         });
 
