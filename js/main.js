@@ -146,24 +146,24 @@
     /*-------------------
 		Quantity change
 	--------------------- */
-    var proQty = $('.pro-qty-2');
-    proQty.prepend('<span class="fa fa-angle-left dec qtybtn"></span>');
-    proQty.append('<span class="fa fa-angle-right inc qtybtn"></span>');
-    proQty.on('click', '.qtybtn', function () {
-        var $button = $(this);
-        var oldValue = $button.parent().find('input').val();
-        if ($button.hasClass('inc')) {
-            var newVal = parseFloat(oldValue) + 1;
-        } else {
-            if (oldValue > 1) {
-                var newVal = parseFloat(oldValue) - 1;
-            } else {
-                newVal = 1;
-            }
-        }
-        $button.parent().find('input').val(newVal);
-        cartTotal();
-    });
+    // var proQty = $('.pro-qty-2');
+    // proQty.prepend('<span class="fa fa-angle-left dec qtybtn"></span>');
+    // proQty.append('<span class="fa fa-angle-right inc qtybtn"></span>');
+    // proQty.on('click', '.qtybtn', function () {
+    //     var $button = $(this);
+    //     var oldValue = $button.parent().find('input').val();
+    //     if ($button.hasClass('inc')) {
+    //         var newVal = parseFloat(oldValue) + 1;
+    //     } else {
+    //         if (oldValue > 1) {
+    //             var newVal = parseFloat(oldValue) - 1;
+    //         } else {
+    //             newVal = 1;
+    //         }
+    //     }
+    //     $button.parent().find('input').val(newVal);
+    //     cartTotal();
+    // });
     // Total price
     function cartTotal(){
         var cartItem = document.querySelectorAll('.shopping__cart__table tbody tr')
@@ -191,11 +191,24 @@
             var productName = product.querySelector("H6").innerText
             var productPrice = product.querySelector("H5").innerText
             var addtr = document.createElement("tr")
-            var trContent = '<tr><td class="product__cart__item"><div class="product__cart__item__pic"><img src="'+productImage+'" alt=""></div><div class="product__cart__item__text"><h6>'+productName+'</h6><h5 class="productTotal">'+productPrice+'</h5></div></td><td class="quantity__item"><div class="quantity"><div class="pro-qty-2"><input type="text" value="1"></div></div></td><td class="cart__price">38250000</td><td class="cart__close"><i class="fa fa-close"></i></td></tr>'
+            var cartItem = document.querySelectorAll('.shopping__cart__table tbody tr')
+            for (var i = 0; i<cartItem.length; i++){
+                var productT = document.querySelectorAll(".title")
+                if(productT[i].innerHTML == productName){
+                    alert("Sản phẩm đã tồn tại trong giỏ hàng!")
+                    return
+                }
+            }
+            var trContent = '<tr><td class="product__cart__item"><div class="product__cart__item__pic"><img src="'+productImage+'" alt=""></div><div class="product__cart__item__text"><h6 class="title">'+productName+'</h6><h5 class="productTotal">'+productPrice+'</h5></div></td><td class="quantity__item"><div class="quantity"><div class="pro-qty-2"><span class="fa fa-angle-left dec qtybtn"></span><input type="text" value="1"><span class="fa fa-angle-right inc qtybtn"></span></div></div></td><td class="cart__price">'+productPrice+'</td><td class="cart__close"><i class="fa fa-close"></i></td></tr>'
             addtr.innerHTML = trContent
             let htmls = '<tr>' + trContent +'</tr>'
+            if (localStorage.getItem('product')!=null){
+                var current = localStorage.getItem('product');
+                htmls = current + htmls;
+            }
             localStorage.setItem('product',htmls)
             console.log(localStorage.getItem('product')) 
+            alert("Đã thêm sản phẩm vào giỏ hàng")
         })
     })
     // function addCart(){
