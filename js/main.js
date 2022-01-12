@@ -165,23 +165,11 @@
     //     cartTotal();
     // });
     // Total price
-    function cartTotal(){
-        var cartItem = document.querySelectorAll('.shopping__cart__table tbody tr')
-        var totalCart = 0
-        var total
-        for (var i = 0; i<cartItem.length; i++){
-            var inputValue = cartItem[i].querySelector('.pro-qty-2 input').value
-            var productPrice = cartItem[i].querySelector('.cart__price').innerHTML
-             total = inputValue * parseFloat (productPrice)
-            totalCart = totalCart + total
-        }
-        var cartTotalSet = document.querySelector('.cart__total_price')
-        cartTotalSet.innerHTML = totalCart.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "₫";
-        var cartTotalSet1 = document.querySelector('.cart__total_price_ship')
-        cartTotalSet1.innerHTML = totalCart.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "₫";
-    }
+    
     
     //Add to cart
+    var cartQuan = 0
+    const cartCountInfo = document.getElementById('cart-count-info');
     const btn = document.querySelectorAll('.add-cart')
     btn.forEach(function(a, index){ 
         a.addEventListener("click", function(event){
@@ -191,7 +179,9 @@
             var productName = product.querySelector("H6").innerText
             var productPrice = product.querySelector("H5").innerText
             var addtr = document.createElement("tr")
-            var cartItem = document.querySelectorAll('.shopping__cart__table tbody tr')
+            var addtrCheckout = document.createElement("tr")
+            var cartItem = document.querySelectorAll('.item')
+            cartCountInfo.textContent = parseInt(cartCountInfo.innerText) + 1;
             for (var i = 0; i<cartItem.length; i++){
                 var productT = document.querySelectorAll(".title")
                 if(productT[i].innerHTML == productName){
@@ -199,7 +189,17 @@
                     return
                 }
             }
-            var trContent = '<tr><td class="product__cart__item"><div class="product__cart__item__pic"><img src="'+productImage+'" alt=""></div><div class="product__cart__item__text"><h6 class="title">'+productName+'</h6><h5 class="productTotal">'+productPrice+'</h5></div></td><td class="quantity__item"><div class="quantity"><div class="pro-qty-2"><span class="fa fa-angle-left dec qtybtn"></span><input type="text" value="1"><span class="fa fa-angle-right inc qtybtn"></span></div></div></td><td class="cart__price">'+productPrice+'</td><td class="cart__close"><i class="fa fa-close"></i></td></tr>'
+
+            var Checkout = '<tr><td><div style="float: left; width: 150px;"><img src="'+productImage+'" alt=""></div></td><td><div style="margin-left: 30px; width: 350px;"><p>Tên sản phẩm: <strong>'+productName+'</strong></p><p>Số lượng: <strong>1</strong></p><p>Giá: <strong class="checkout_price">'+productPrice+'</strong></p></div></td></tr>'
+            addtrCheckout.innerHTML = Checkout
+            let htmlsCheckout = '<tr>' + Checkout +'</tr>'
+            if (localStorage.getItem('productCheckout')!=null){
+                var current = localStorage.getItem('productCheckout');
+                htmlsCheckout = current + htmlsCheckout;
+            }
+            localStorage.setItem('productCheckout',htmlsCheckout)
+
+            var trContent = '<tr class="item"><td class="product__cart__item"><div class="product__cart__item__pic"><img src="'+productImage+'" alt=""></div><div class="product__cart__item__text"><h6 class="title">'+productName+'</h6><h5 class="productTotal">'+productPrice+'</h5></div></td><td class="quantity__item"><div class="quantity"><div class="pro-qty-2"><span onclick="DeCrease(this)" class="fa fa-angle-left dec qtybtn"></span><input class="qty-input" type="text" value="1"><span onclick="InCrease(this)" class="fa fa-angle-right inc qtybtn"></span></div></div></td><td class="cart__price">'+productPrice+'</td><td class="cart__close"><i class="fa fa-close"></i></td></tr>'
             addtr.innerHTML = trContent
             let htmls = '<tr>' + trContent +'</tr>'
             if (localStorage.getItem('product')!=null){
@@ -208,17 +208,31 @@
             }
             localStorage.setItem('product',htmls)
             console.log(localStorage.getItem('product')) 
+            console.log(localStorage.getItem('productCheckout'))
             alert("Đã thêm sản phẩm vào giỏ hàng")
+            cartTotal()
         })
     })
-    // function addCart(){
-    //     console.log(localStorage.getItem('product'))
-    //     var cartTable = document.querySelector('.cart_product')
-    //     console.log(cartTable)
-    //     const item = localStorage.getItem('product')
-    //     cartTable.append(item)
-    // }
 
+    function cartTotal(){
+        var cartItem = document.querySelectorAll('.item')
+        var totalCart = 0
+        var total
+        for (var i = 0; i<cartItem.length; i++){
+            var inputValue = cartItem[i].querySelector('.pro-qty-2 input').value
+            var productPrice = cartItem[i].querySelector('.cart__price').innerHTML
+            console.log(productPrice)
+            total = inputValue * parseFloat(productPrice)
+            console.log(total)
+            totalCart = totalCart + total
+        }
+        var cartTotalSet = document.querySelector('.cart__total_price')
+        cartTotalSet.innerHTML = totalCart.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "₫";
+        var cartTotalSet1 = document.querySelector('.cart__total_price_ship')
+        cartTotalSet1.innerHTML = totalCart.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "₫";
+    }
+    
+    
     /*------------------
         Achieve Counter
     --------------------*/

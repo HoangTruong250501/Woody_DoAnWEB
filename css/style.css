@@ -2624,6 +2624,26 @@ ol {
 /*---------------------
   Shopping Cart
 -----------------------*/
+#cart-count-info{
+    position: absolute;
+    top: -12px;
+    right: -8px;
+    background: rgb(197, 144, 29);
+    color: rgb(253, 253, 253);
+    font-size: 1rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    justify-content: center;
+    font-weight: 600;
+}
 .shopping__cart__table {
     margin-bottom: 30px;
 }
