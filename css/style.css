@@ -283,19 +283,43 @@ ol {
     padding: 0 15px;
 }
 
+.search-product {
+    width: 500px;
+    background: rgb(238, 165, 8, 0.7);
+    display: flex;
+    padding: 5px;
+    margin-bottom: 1px;
+}
+
+.search-product-pic {
+    width: 20%;
+}
+
+.search-product-text {
+    margin: 20px 0 0 10px;
+    font-size: 15px;
+}
+
+.search-product-text h6 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .search-model-form input {
     width: 500px;
-    font-size: 30px;
+    font-size: 25px;
     border: none;
     border-bottom: 2px solid rgb(238, 165, 8);
     background: 0 0;
     color: rgb(255, 255, 255);
+    margin-top: 120px;
+    margin-bottom: 10px;
 }
 
 .search-close-switch {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: #333;
     color: #fff;
     text-align: center;
@@ -1776,6 +1800,104 @@ ol {
     font-weight: 700;
     margin-right: 20px;
 }
+.p-b-30{
+    padding-bottom: 30px;
+}
+.p-b-68{
+    padding-bottom: 68px;
+}
+.wrap-pic-s{
+    display: block;
+}
+.wrap-pic-s img {width: 100%; height: 100%;}
+
+.size-109 {
+    width: 60px;
+    height: 60px;
+}
+.bor0 {border-radius: 50%;}
+
+.of-hidden {overflow: hidden;}
+.m-r-18{
+    margin-right: 18px;
+}
+.m-r-16{
+    margin-right: 16px;
+}
+.m-t-6{
+    margin-top: 6px;
+}
+.dis-none {display: none;}
+
+.size-207 {
+    width: calc(100% - 78px);
+}
+
+.flex-sb-m{
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.flex-sb-m {
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.p-b-17{
+    padding-bottom: 17px;
+}
+.p-b-7{
+    padding-bottom: 7px;
+}
+
+.size-207 {
+    width: calc(100% - 78px);
+}
+.cl6 {color: #888;}
+.cl2 {color: #333;}
+.cl3 {color: #666;}
+.size-205 {
+    width: 145px;
+}
+
+.mtext-108 {
+    font-family: Poppins-Regular;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.stext-102 {
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.stext-101 {
+    font-family: Poppins-Medium;
+    font-size: 15px;
+    line-height: 1.466667;
+    text-transform: uppercase;
+}
+.size-112 {
+    min-width: 134px;
+    height: 43px;
+}
+
+.bg7 {background-color: rgb(83, 82, 79);}
+.bor11 {
+    border-radius: 21px;
+}
+.hov-btn3:hover {
+    border-color: #e5ac5c;
+    background-color: #f1b502;
+    color: #fff;
+  }
+
+.w-full {width: 100%;}
 
 .product__details__btns__option a:last-child {
     margin-right: 0;
@@ -1818,10 +1940,15 @@ ol {
     font-weight: 700;
     line-height: 30px;
 }
-
 .product__details__last__option ul li span {
     font-weight: 400;
     color: #b7b7b7;
+
+    list-style: none;
+    font-size: 15px;
+    color: #111111;
+    font-weight: 700;
+    line-height: 30px;
 }
 
 .product__details__tab {
@@ -1860,6 +1987,13 @@ ol {
 .product__details__tab__content {
     padding-top: 35px;
 }
+.flex-t{
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
 
 .note {
     color: #111111;
@@ -1886,6 +2020,16 @@ ol {
 
 .product__details__tab__content__item p {
     margin-bottom: 0;
+}
+
+/* .product__details__tab__content__item img {
+    height: 20%;
+    width: 40%;
+} */
+
+.product_pic_size {
+    width: 40%;
+    margin-left: 30%;
 }
 
 .hero-wrap {
@@ -1975,6 +2119,54 @@ ol {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+}
+
+.flex-m{
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+    -ms-align-items: center;
+	align-items: center;
+}
+
+.p-t-50{
+    padding-top: 50px;
+}
+
+.p-b-23{
+    padding-bottom: 23px;
+}
+.p-b-25{
+    padding-bottom: 25px;
+}
+.p-b-5{
+    padding-bottom: 5px;
+}
+.size-110 {
+    width: 100%;
+    min-height: 100px;
+  }
+  .bor8 {
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+  }
+  .p-lr-20{
+    padding-left: 20px;
+  }
+  .p-lr-15{
+    padding-left: 15px;
+  }
+  .trans-04 {
+	-webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.m-b-10{
+    margin-bottom: 10px;
 }
 
 .no-gutters {
@@ -3981,6 +4173,7 @@ ol {
 /* Small Device = 320px */
 
 @media only screen and (max-width: 479px) {
+    .m-lr-15-sm {margin-left: 15px; margin-right: 15px;}
     .cart__total {
         padding: 35px 30px 40px;
     }

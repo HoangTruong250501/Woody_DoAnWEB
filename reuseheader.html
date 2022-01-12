@@ -7,6 +7,7 @@
     <title>Woody | HomePage</title>
 
 </head>
+
 <body>
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
@@ -37,31 +38,29 @@
                 <div class="col-lg-6 col-md-6">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li><a href="./index.html">Trang chủ</a></li> 
-                            <!-- class="active" -->
-                            <li><a href="./shop.html">Sản phẩm</a>
+                            <li id="home"><a href="./index.html">Trang chủ</a></li>
+                            <li id="product"><a href="./shop.html">Sản phẩm</a>
                                 <ul class="dropdown">
-                                    <li><a href="./shop-bed.html">Sản phẩm giường</a></li>
-                                    <li><a href="./shop-desk.html">Sản phẩm bàn</a></li>
-                                    <li><a href="./shop-seat.html">Sản phẩm ghế</a></li>
-                                    <li><a href="./shop-sofa.html">Sản phẩm sofa</a></li>
-                                    <!-- <li><a href="./shop-best.html">Phòng khách</a></li> -->
+                                    <li id="bed"><a href="./shop-bed.html">Sản phẩm giường</a></li>
+                                    <li id="desk"><a href="./shop-desk.html">Sản phẩm bàn</a></li>
+                                    <li id="seat"><a href="./shop-seat.html">Sản phẩm ghế</a></li>
+                                    <li id="sofa"><a href="./shop-sofa.html">Sản phẩm sofa</a></li>
                                 </ul>
                             </li>
-                            <li><a href="test.html">Bộ sưu tập</a>
+                            <li id="collection"><a>Bộ sưu tập</a>
                                 <ul class="dropdown">
-                                    <li><a href="shop-details.html">Nhà hiện đại</a></li>
-                                    <li><a href="product-details.html">Bộ sưu tập theo mùa</a></li>
-                                    <li><a href="./shopping-cart.html">Bộ sưu tập đặc biệt</a></li>
+                                    <li id="modern-house"><a href="./modern-home-collection.html">Nhà hiện đại</a></li>
+                                    <li id="seasonal"><a href="./seasonal-collection.html">Bộ sưu tập theo mùa</a></li>
+                                    <li id="special"><a href="./special-collection.html">Bộ sưu tập đặc biệt</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Thực tế ảo</a>
+                            <li id="3D-technology"><a>Thực tế ảo</a>
                                 <ul class="dropdown">
-                                    <li><a href="./about.html">Showroom ảo</a></li>
-                                    <li><a href="./shop-details.html">Trải nghiệm sản phẩm</a></li>
+                                    <li><a href="#">Showroom ảo</a></li>
+                                    <li><a href="#">Trải nghiệm sản phẩm</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./about.html">Giới thiệu</a></li>
+                            <li id="about"><a href="./about.html">Giới thiệu</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -78,16 +77,115 @@
     </header>
     <!-- Header Section End -->
 
-        <!-- Search Begin -->
-        <div class="search-model">
-            <div class="h-100 d-flex align-items-center justify-content-center">
-                <div class="search-close-switch">+</div>
-                <form class="search-model-form">
-                    <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
-                </form>
-            </div>
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center-1 justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input class="searchbar" type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                <div class="search-results">
+                 <!-- <div class="search-product">
+                    <div class="search-product-pic">
+                        <img src="img/product/bedroom_iris_1m8.jpg">
+                    </div>
+                    <div class="search-product-text">
+                        <h6>Giường nằm cao cấp</h6>
+                        <span>15.000.000đ</span>
+                    </div>
+                </div> -->
+                <!--<div class="search-product">
+                    <div class="search-product-pic">
+                        <img src="img/product/bedroom_iris_1m8.jpg">
+                    </div>
+                    <div class="search-product-text">
+                        <h6>Giường nằm cao cấp</h6>
+                        <span>15.000.000đ</span>
+                    </div> -->
+                </div>
+            </form>
+            
         </div>
-        <!-- Search End -->
+    </div>
+    <!-- Search End -->
+
+    <script>
+        var home = document.getElementById("home");
+        var product = document.getElementById("product");
+        var collection = document.getElementById("collection");
+        var technology = document.getElementById("3D-technology");
+        var about = document.getElementById("about");
+
+        var fullURL = window.location.href;
+        var arr = fullURL.split("/");
+        var link = arr[arr.length - 1];
+
+        var arrProduct = "shop.html, shop-bed.html, shop-desk.html, shop-seat.html, shop-sofa.html, product-details.html, shop-detail.html";
+        var arrCollection = "modern-home-collection.html, seasonal-collection.html, special-collection.html";
+
+        if (link == 'index.html') {
+            home.className = "active";
+            console.log(link);
+        }
+
+        if (arrProduct.includes(link)) {
+            product.className = "active";
+            console.log(link);
+        }
+
+        if (arrCollection.includes(link)) {
+            collection.className = "active";
+            console.log(link);
+        }
+
+        if (link == 'about.html') {
+            about.className = "active";
+            console.log(link);
+        }
+    </script>
+
+    <!-- Search bar -->
+    <script>
+        var xmlHtttp = new XMLHttpRequest();
+        var url = "/json/product-search.json";
+        let myArr;
+        xmlHtttp.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200){
+                myArr = JSON.parse(this.responseText);
+            }
+        }
+        xmlHtttp.open("GET", url, true);
+        xmlHtttp.send();
+        function selectElement(selector){
+            return document.querySelector(selector);
+        }
+        function clearResults(){
+            selectElement('.search-results').innerHTML= " " ;
+
+        }
+        function getResults(){
+            const search = selectElement('.searchbar').value;
+            // console.log(search);
+        clearResults();
+
+        if(search.length > 0)
+        {
+            for(let i = 0; i < myArr.length; i++){
+                if(myArr[i].prName.toLocaleLowerCase().includes(search.toLocaleLowerCase())){
+                    selectElement('.search-results').innerHTML += '<div class="search-product" onClick=details(' + i + ')><div class="search-product-pic"><img src="'+ myArr[i].prImage +'"></div><div class="search-product-text"><h6>'+ myArr[i].prName +'</h6><span>'+ myArr[i].prPrice +' đ</span></div></div>'
+                }
+            }
+        }
+    }
+        selectElement('.searchbar').addEventListener('keyup', getResults);
+
+        function details(i){
+            var sp = myArr[i];
+            localStorage.setItem("data", JSON.stringify(sp));
+            location.href = "shop-detail.html";
+        }
+
+    </script>
 
 </body>
+
 </html>
