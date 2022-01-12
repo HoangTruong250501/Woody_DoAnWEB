@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/checkout_responsive.css" type="text/css" >
     <link rel="stylesheet" href="css/checkout.css" type="text/css" >
 </head>
-<body>
+<body onload="addCartCheckout(), checkoutTotal()">
 
 
 <!-- Offcanvas Menu Begin -->
@@ -187,35 +187,8 @@
 										<div class="shopping__cart__table">
 											<table>
 												<h3><strong>Đơn hàng của bạn</strong></h3>
-												<tbody>
-													<tr>
-														<td>
-															<div style="float: left; width: 150px;">
-																<img src="img/product/kitchen_bridge_1m6.jpg" alt="">
-															</div>
-														</td>
-														<td>
-															<div style="float: right; margin-left: 50px; width: 200px;">
-																<p>Tên sản phẩm:</p>
-																<p>Số lượng:</p>
-																<p>Giá:</p>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div style="float: left; width: 150px;">
-																<img src="img/product/bedroom_austin_1m8.jpg" alt="">
-															</div>
-														</td>
-														<td>
-															<div style="float: right; margin-left: 50px; width: 200px;">
-																<p>Tên sản phẩm:</p>
-																<p>Số lượng:</p>
-																<p>Giá:</p>
-															</div>
-														</td>
-													</tr>
+												<tbody class="cart_product_checkout">
+													
 												</tbody>
 											</table>
 										</div>
@@ -349,5 +322,30 @@
 	<script src="plugins/easing/easing.js"></script>
 	<script src="plugins/parallax-js-master/parallax.min.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+		function addCartCheckout(){
+        console.log(localStorage.getItem('productCheckout'))
+        var cartTable = document.querySelector('.cart_product_checkout')
+        console.log(cartTable)
+        const item = localStorage.getItem('productCheckout')
+        var currentHtml = cartTable.innerHTML;
+        currentHtml+= item
+        cartTable.innerHTML = currentHtml
+    }
+	function checkoutTotal(){
+        var cartItem = document.querySelectorAll("tr")
+        console.log(cartItem)
+        var totalCart = 0
+        var total
+        for (var i = 0; i<cartItem.length; i++){
+            var productPrice = cartItem[i].querySelector('.checkout_price').innerHTML
+            console.log(productPrice)
+            totalCart = totalCart + parseFloat(productPrice.slice(0, length-1).split('.').join(''))
+			console.log(totalCart)
+        }
+        var cartTotalSet = document.querySelector('.cart_extra_total_title')
+        cartTotalSet.innerHTML = totalCart.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "₫";
+    }
+	</script>
 </body>
 </html>
