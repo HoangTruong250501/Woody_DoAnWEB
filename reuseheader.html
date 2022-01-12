@@ -82,11 +82,31 @@
 
     <!-- Search Begin -->
     <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="h-100 d-flex align-items-center-1 justify-content-center">
             <div class="search-close-switch">+</div>
             <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                <input class="searchbar" type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                <div class="search-results">
+                 <!-- <div class="search-product">
+                    <div class="search-product-pic">
+                        <img src="img/product/bedroom_iris_1m8.jpg">
+                    </div>
+                    <div class="search-product-text">
+                        <h6>Giường nằm cao cấp</h6>
+                        <span>15.000.000đ</span>
+                    </div>
+                </div> -->
+                <!--<div class="search-product">
+                    <div class="search-product-pic">
+                        <img src="img/product/bedroom_iris_1m8.jpg">
+                    </div>
+                    <div class="search-product-text">
+                        <h6>Giường nằm cao cấp</h6>
+                        <span>15.000.000đ</span>
+                    </div> -->
+                </div>
             </form>
+            
         </div>
     </div>
     <!-- Search End -->
@@ -102,8 +122,8 @@
         var arr = fullURL.split("/");
         var link = arr[arr.length - 1];
 
-        var arrProduct = "shop.html, shop-bed.html, shop-desk.html, shop-seat.html, shop-sofa.html, product-details.html";
-        var arrCollection = "reuseheader.html, seasonal-collection.html, special-collection.html";
+        var arrProduct = "shop.html, shop-bed.html, shop-desk.html, shop-seat.html, shop-sofa.html, product-details.html, shop-detail.html";
+        var arrCollection = "modern-home-collection.html, seasonal-collection.html, special-collection.html";
 
         if (link == 'index.html') {
             home.className = "active";
@@ -124,6 +144,49 @@
             about.className = "active";
             console.log(link);
         }
+    </script>
+
+    <!-- Search bar -->
+    <script>
+        var xmlHtttp = new XMLHttpRequest();
+        var url = "/json/product-search.json";
+        let myArr;
+        xmlHtttp.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200){
+                myArr = JSON.parse(this.responseText);
+            }
+        }
+        xmlHtttp.open("GET", url, true);
+        xmlHtttp.send();
+        function selectElement(selector){
+            return document.querySelector(selector);
+        }
+        function clearResults(){
+            selectElement('.search-results').innerHTML= " " ;
+
+        }
+        function getResults(){
+            const search = selectElement('.searchbar').value;
+            // console.log(search);
+        clearResults();
+
+        if(search.length > 0)
+        {
+            for(let i = 0; i < myArr.length; i++){
+                if(myArr[i].prName.toLocaleLowerCase().includes(search.toLocaleLowerCase())){
+                    selectElement('.search-results').innerHTML += '<div class="search-product" onClick=details(' + i + ')><div class="search-product-pic"><img src="'+ myArr[i].prImage +'"></div><div class="search-product-text"><h6>'+ myArr[i].prName +'</h6><span>'+ myArr[i].prPrice +' đ</span></div></div>'
+                }
+            }
+        }
+    }
+        selectElement('.searchbar').addEventListener('keyup', getResults);
+
+        function details(i){
+            var sp = myArr[i];
+            localStorage.setItem("data", JSON.stringify(sp));
+            location.href = "shop-detail.html";
+        }
+
     </script>
 
 </body>

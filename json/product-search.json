@@ -1,5 +1,5 @@
-{
-    "product" : [{
+[
+    {
       "prDescription" : "The idea with MISTERHULT was to make a lamp with a minimal environmental footprint. By letting bamboo, that otherwise would be discarded, enhance the lamp’s expression, we harness the plant more than twice as much.",
       "prImage" : "https://firebasestorage.googleapis.com/v0/b/woodygroup09.appspot.com/o/bestCollection%2Flingting.jpg?alt=media&token=ceb53d44-d801-45f9-86bb-1cedd5cd024a",
       "prName" : "Đèn tre mặt dây chuyền Misterhult",
@@ -15,9 +15,9 @@
       "prRating" : 3.5,
       "prRvNumber" : 27,
       "prCode": 38861,
-      "prType": "Bàn ăn",
+      "prType": "Bàn",
       "prTag": "Bàn ăn, ghế ăn",
-      "prInfo": "Mặt bàn melamine có khả năng chống ẩm, chống bám bẩn và dễ dàng giữ vệ sinh.'<br> Bàn rất chắc chắn nhờ khung kim loại. '<br> Kiểu dáng suông đơn giản dễ kết hợp với nhiều phong cách.'",
+      "prInfo": "Mặt bàn melamine có khả năng chống ẩm, chống bám bẩn và dễ dàng giữ vệ sinh.<br> Bàn rất chắc chắn nhờ khung kim loại. <br> Kiểu dáng suông đơn giản dễ kết hợp với nhiều phong cách.",
       "prPic2": "https://firebasestorage.googleapis.com/v0/b/woodyappweb1.appspot.com/o/product%2Fpr01%2Fjaninge02.jpg?alt=media&token=1f900d39-f41d-47bd-97b6-fd7b3d555a9e",
       "prPic3": "https://firebasestorage.googleapis.com/v0/b/woodyappweb1.appspot.com/o/product%2Fpr01%2Fjaninge03.jpg?alt=media&token=dbd7f611-10d0-4ca2-a131-bf0ceaf289f3",
       "prPic4": "https://firebasestorage.googleapis.com/v0/b/woodyappweb1.appspot.com/o/product%2Fpr01%2Fjaninge04.jpg?alt=media&token=c6a93e16-19c7-47cb-8c5c-7e938530b4a9"
@@ -366,5 +366,4 @@
   "prRating" : 5,
   "prRvNumber" : 21
 } ]
-}
     

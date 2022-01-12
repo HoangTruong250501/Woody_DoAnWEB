@@ -72,9 +72,8 @@
 						<div class="wrap-slick3 flex-sb flex-w">
 							<div class="wrap-slick3-dots"></div>
 							<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
-
 							<div class="slick3 gallery-lb">
-								<div class="item-slick3" data-thumb="images/product-detail-01.jpg">
+								<div class="item-slick3" data-thumb="">
 									<div class="wrap-pic-w pos-relative">
 										<img id="image" src="" alt="IMG-PRODUCT" style="height: 400px; ">
 									</div>
@@ -453,13 +452,22 @@
                 <div id="footer"></div>    
             </footer>
             <!-- Footer Section End -->
+ <!-- Get data -->
+ <script>
+    let sp = JSON.parse(localStorage.getItem("data"));
+    document.getElementById("image").src = sp.prImage;
+    document.getElementById("price").innerHTML = sp.prPrice +"đ";
+    document.getElementById("name").innerHTML = sp.prName;
+    document.getElementById("des").innerHTML = sp.prDescription;
+    document.getElementById("RvNumber").innerHTML = " - " + sp.prRvNumber + " reviews";
+</script>
 
-    <script>
+    <!-- <script>
         $(function() {
         $('#header').load('reuseheader.html');
         $('#footer').load('reusefooter.html');
         });
-        </script>
+        </script> -->
 
  <!-- Js Plugins -->
  <script src="js/jquery-3.3.1.min.js"></script>
@@ -473,15 +481,6 @@
  <script src="js/owl.carousel.min.js"></script>
  <script src="js/main.js"></script>
  
- <!-- Get data -->
- <script>
-    let sp = JSON.parse(localStorage.getItem("data"));
-    document.getElementById("image").src = sp.prImage;
-    document.getElementById("price").innerHTML = sp.prPrice +"đ";
-    document.getElementById("name").innerHTML = sp.prName;
-    document.getElementById("des").innerHTML = sp.prDescription;
-    document.getElementById("RvNumber").innerHTML = " - " + sp.prRvNumber + " reviews";
-</script>
 
 </body>
 </html>

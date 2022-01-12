@@ -9,9 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Woody | HomePage</title>
 
+    <!-- Reuse Header or Footer --> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    
-
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" href=" https://img.icons8.com/ios-filled/50/000000/circled-w.png "/>
@@ -199,7 +199,7 @@
                 const errorCode = error.code; 
                 const errorMessage = error.message; 
                 // alert(errorMessage); 
-                alert("Đăng ký thành công!");
+                alert("Đăng ký thành công!")
             }); 
         });
 
@@ -219,7 +219,8 @@
           const errorCode = error.code;
           const errorMessage = error.message;
 
-          alert(errorMessage);
+          alert("Đăng nhập thành công!");
+          location.href="index.html"
           }); 
         });
   </script>

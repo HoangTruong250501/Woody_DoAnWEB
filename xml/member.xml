@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <member>
+        <image>/img/about/team/mongW.png</image>
+        <name>Thanh Mộng</name>
+        <id>K194111613</id>
+        <birthday>12/03/2001</birthday>
+        <position>Quản lý</position>
+    </member>
+    <member>
+        <image>/img/about/team/nhungW.png</image>
+        <name>Hồng Nhung</name>
+        <id>K194111620</id>
+        <birthday>30/06/2001</birthday>
+        <position>Bộ phận bán hàng</position>
+    </member>
+    <member>
+        <image>/img/about/team/hoangW.png</image>
+        <name>Nhật Hoàng</name>
+        <id>K194111606</id>
+        <birthday>25/05/2001</birthday>
+        <position>Bộ phận IT</position>
+    </member>
+    <member>
+        <image>/img/about/team/taiW.png</image>
+        <name>Trí Tài</name>
+        <id>K194111625</id>
+        <birthday>11/08/2001</birthday>
+        <position>Bộ phận hỗ trợ</position>
+    </member>
+    <member>
+        <image>/img/about/team/vuW.png</image>
+        <name>Tấn Vũ</name>
+        <id>K194111639</id>
+        <birthday>28/06/2001</birthday>
+        <position>Bộ phận kho</position>
+    </member>
+</root>

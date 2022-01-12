@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Woody | Chi tiết sản phẩm</title>
+
+    <!-- Reuse Header or Footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header>
+        <div id="header"></div>    
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Shop Details Section Begin -->
+    <section class="shop-details">
+        <div class="product__details__pic">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="product__details__breadcrumb">
+                            <a href="./index.html">Trang chủ</a>
+                            <a href="./shop.html">Sản phẩm</a>
+                            <span>Chi tiết sản phẩm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">
+                                    <div class="product__thumb__pic set-bg">
+                                        <img id="image_tab">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">
+                                    <div class="product__thumb__pic set-bg" data-setbg="">
+                                        <img id="pic2_tab" src="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">
+                                    <div class="product__thumb__pic set-bg" data-setbg="">
+                                        <img id="pic3_tab" src="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab">
+                                    <div class="product__thumb__pic set-bg" data-setbg="">
+                                        <img id="pic4_tab" src="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                <div class="product__details__pic__item">
+                                    <img id="image" src="">
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-2" role="tabpanel">
+                                <div class="product__details__pic__item">
+                                    <img id="pic2" src="">
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-3" role="tabpanel">
+                                <div class="product__details__pic__item">
+                                    <img id="pic3" src="" >
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-4" role="tabpanel">
+                                <div class="product__details__pic__item">
+                                    <img id="pic4" src="" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product__details__content">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="product__details__text">
+                            <h4 id="name"></h4>
+                            <div class="rating">
+                                <span id="rating_pr"></span>
+                                <i class="fa fa-star"></i>
+                                <span id="RvNumber"></span>
+                            </div>
+                            <h3 id="price"><span>70.00</span></h3>
+                            <p id="des"></p>
+                            <div class="product__details__cart__option">
+                                <div class="quantity">
+                                    <div class="pro-qty">
+                                        <input type="text" value="1">
+                                    </div>
+                                </div>
+                                <a href="#" class="primary-btn">Thêm vào giỏ hàng</a>
+                            </div>
+                            <div class="product__details__btns__option">
+                                <a href="#"><i class="fa fa-heart"></i> Thêm vào danh mục yêu thích</a>
+                            </div>
+                            <div class="product__details__last__option">
+                                <h5><span>Đảm bảo thanh toán an toàn</span></h5>
+                                <img src="img/shop-details/details-payment.png" alt="">
+                                <ul>
+                                    <li > Mã sản phẩm: <span id="code" style="font-weight: 100;"></span></li>
+                                    <li >Thể loại: <span id="type" style="font-weight: 100;"></span></li>
+                                    <li >Tag: <span id="tag" style="font-weight: 100;"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="product__details__tab">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#tabs-5"
+                                    role="tab">Thông tin sản phẩm</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="RvNumber_tab" class="nav-link" data-toggle="tab" href="#tabs-6" role="tab">
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#tabs-7" role="tab">Kích thước</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tabs-5" role="tabpanel">
+                                    <div class="product__details__tab__content">
+                                        <div class="product__details__tab__content__item">
+                                            <p id="info">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tabs-6" role="tabpanel">
+                                    <div class="product__details__tab__content">
+                                        <div class="product__details__tab__content__item">
+                                            <div class="col-sm-10 col-md-8 col-lg-6 m-lr-auto">
+                                                <div class="p-b-30 m-lr-15-sm">
+                                                    <!-- Review -->
+                                                    <div class="flex-w flex-t p-b-68">
+                                                        <div class="wrap-pic-s size-109 bor0 of-hidden m-r-18 m-t-6">
+                                                            <img src="img/review/hung01.jpg" alt="AVATAR">
+                                                        </div>
+            
+                                                        <div class="size-207">
+                                                            <div class="flex-w flex-sb-m p-b-17">
+                                                                <span class="mtext-107 cl2 p-r-20">
+                                                                    Đặng Tiến Hưng <br>
+                                                                    <span class="mtext-107 cl2 p-r-20">
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star-o"></i>
+                                                                    </span>
+                                                                </span>
+                                                            </div>
+                                                            <p class="stext-102 cl6">
+                                                                Sản phẩm rất tuyệt vời, ngủ trên sản phẩm này mơ thấy có người yêu
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-w flex-t p-b-68">
+                                                        <div class="wrap-pic-s size-109 bor0 of-hidden m-r-18 m-t-6">
+                                                            <img src="img/review/ckhoa1.jpg" alt="AVATAR">
+                                                        </div>
+            
+                                                        <div class="size-207">
+                                                            <div class="flex-w flex-sb-m p-b-17">
+                                                                <span class="mtext-107 cl2 p-r-20">
+                                                                    Trịnh Chấn Khoa <br>
+                                                                    <span class="mtext-107 cl2 p-r-20">
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                    </span>
+                                                                </span>
+                                                            </div>
+                                                            <p class="stext-102 cl6">
+                                                                Chất lượng sản phẩm tốt, thái độ nhân viên nhiệt tình. Nói chung là Okela
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- Add review -->
+                                                    <form class="w-full">
+                                                        <h5 class="mtext-108 cl2 p-b-7">
+                                                            Thêm Nhận Xét
+                                                        </h5>
+            
+                                                        <p class="stext-102 cl6">
+                                                            Địa chỉ email của bạn sẽ không bị công khai. Điền đầy đủ *
+                                                        </p>
+            
+                                                        <div class="flex-w flex-m p-t-50 p-b-23">
+                                                            <span class="stext-102 cl3 m-r-16">
+                                                                Xếp hạng đánh giá
+                                                            </span>
+                                                            <div class="rating">
+                                                                <i class="fa fa-star-o"></i>
+                                                                <i class="fa fa-star-o"></i>
+                                                                <i class="fa fa-star-o"></i>
+                                                                <i class="fa fa-star-o"></i>
+                                                                <i class="fa fa-star-o"></i>
+                                                            </div>
+                                                            <span class="wrap-rating fs-18 cl11 pointer">
+                                                                <input class="dis-none" type="number" name="rating">
+                                                            </span>
+                                                        </div>
+            
+                                                        <div class="row p-b-25">
+                                                            <div class="col-12 p-b-5">
+                                                                <label class="stext-102 cl3" for="review">Đánh giá của bạn</label>
+                                                                <textarea class="size-110 bor8 stext-102 cl2 p-lr-20 p-tb-10" id="review" name="review"></textarea>
+                                                            </div>
+            
+                                                            <div class="col-sm-6 p-b-5">
+                                                                <label class="stext-102 cl3" for="name" style="font-family: sans-serif;">Tên của bạn</label>
+                                                                <input class="size-111 bor8 stext-102 cl2 p-lr-20" id="name" type="text" name="name">
+                                                            </div>
+            
+                                                            <div class="col-sm-6 p-b-5">
+                                                                <label class="stext-102 cl3" for="email" style="font-family: sans-serif;"> Địa chỉ Email</label>
+                                                                <input class="size-111 bor8 stext-102 cl2 p-lr-20" id="email" type="text" name="email">
+                                                            </div>
+                                                        </div>
+            
+                                                        <button class="flex-c-m stext-101 cl0 size-112 bg7 bor11 hov-btn3 p-lr-15 trans-04 m-b-10">
+                                                            Phản Hồi
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tabs-7" role="tabpanel">
+                                    <div class="product__details__tab__content">
+                                        <div class="product__details__tab__content__item">
+                                        <img class="product_pic_size" src="https://firebasestorage.googleapis.com/v0/b/woodyappweb1.appspot.com/o/product%2Fpr01%2Fjaninge04.jpg?alt=media&token=c6a93e16-19c7-47cb-8c5c-7e938530b4a9">
+                                        <!-- <div class="product__details__tab__content__item">
+                                            <h5>Chiều rộng</h5>
+                                            <p>26 3/4 "</p>
+                                        </div>
+                                        <div class="product__details__tab__content__item">
+                                            <h5>Chiều dài</h5>
+                                            <p>26 3/4 "</p>
+                                        </div>
+                                        <div class="product__details__tab__content__item">
+                                            <h5>Chiều cao</h5>
+                                            <p>36 1/4 "</p>
+                                        </div> -->
+                                    </div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shop Details Section End -->
+
+    <!-- Related Section Begin -->
+    <section class="related spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="related-title">Sản phẩm liên quan</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="https://firebasestorage.googleapis.com/v0/b/woodygroup09.appspot.com/o/bestCollection%2Flingting.jpg?alt=media&token=ceb53d44-d801-45f9-86bb-1cedd5cd024a">
+                            <span class="label">New</span>
+                            <ul class="product__hover">
+                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6>Đèn tre mặt dây chuyền Misterhult</h6>
+                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <div class="rating">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <h5>900.000đ</h5>
+                            <div class="product__color__select">
+                                <label for="pc-1">
+                                    <input type="radio" id="pc-1">
+                                </label>
+                                <label class="active black" for="pc-2">
+                                    <input type="radio" id="pc-2">
+                                </label>
+                                <label class="grey" for="pc-3">
+                                    <input type="radio" id="pc-3">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="https://firebasestorage.googleapis.com/v0/b/woodygroup09.appspot.com/o/Collection%2FBedCollection%2Fmalm.jpg?alt=media&token=ff0811d0-a6a9-41bc-b4b4-351127b074c9">
+                            <ul class="product__hover">
+                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6>Giường ngủ Malm 1m6</h6>
+                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <div class="rating">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <h5>15.590.000đ</h5>
+                            <div class="product__color__select">
+                                <label for="pc-4">
+                                    <input type="radio" id="pc-4">
+                                </label>
+                                <label class="active black" for="pc-5">
+                                    <input type="radio" id="pc-5">
+                                </label>
+                                <label class="grey" for="pc-6">
+                                    <input type="radio" id="pc-6">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
+                    <div class="product__item sale">
+                        <div class="product__item__pic set-bg" data-setbg="https://firebasestorage.googleapis.com/v0/b/woodygroup09.appspot.com/o/bestCollection%2Fbathroom.jpg?alt=media&token=515cfe95-7dd7-4bea-9bff-60207996c900">
+                            <span class="label">Sale</span>
+                            <ul class="product__hover">
+                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6>Tủ hộc kéo nhà tắm Godmorgon</h6>
+                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <h5>8.930.000đ</h5>
+                            <div class="product__color__select">
+                                <label for="pc-7">
+                                    <input type="radio" id="pc-7">
+                                </label>
+                                <label class="active black" for="pc-8">
+                                    <input type="radio" id="pc-8">
+                                </label>
+                                <label class="grey" for="pc-9">
+                                    <input type="radio" id="pc-9">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="https://firebasestorage.googleapis.com/v0/b/woodygroup09.appspot.com/o/Collection%2FBedCollection%2Fslaekt.webp?alt=media&token=b2cc9b08-289c-40d0-a3c7-0a6a6a2c54c6">
+                            <ul class="product__hover">
+                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6>Giường đơn hộc kéo Slaekt</h6>
+                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <div class="rating">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <h5>21.670.000đ</h5>
+                            <div class="product__color__select">
+                                <label for="pc-10">
+                                    <input type="radio" id="pc-10">
+                                </label>
+                                <label class="active black" for="pc-11">
+                                    <input type="radio" id="pc-11">
+                                </label>
+                                <label class="grey" for="pc-12">
+                                    <input type="radio" id="pc-12">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Related Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div id="footer"></div>    
+    </footer>
+    <!-- Footer Section End -->
+    <script>
+        let sp = JSON.parse(localStorage.getItem("data"));
+        document.getElementById("image").src = sp.prImage;
+        document.getElementById("image_tab").src = sp.prImage;
+        document.getElementById("pic2").src = sp.prPic2;
+        document.getElementById("pic2_tab").src = sp.prPic2;
+        document.getElementById("pic3").src = sp.prPic3;
+        document.getElementById("pic3_tab").src = sp.prPic3;
+        document.getElementById("pic4").src = sp.prPic4;
+        document.getElementById("pic4_tab").src = sp.prPic4;
+        document.getElementById("price").innerHTML = sp.prPrice +"đ";
+        document.getElementById("name").innerHTML = sp.prName;
+        document.getElementById("rating_pr").innerHTML = sp.prRating;
+        document.getElementById("code").innerHTML = sp.prCode;
+        document.getElementById("type").innerHTML = sp.prType;
+        document.getElementById("tag").innerHTML = sp.prTag;
+        document.getElementById("des").innerHTML = sp.prDescription;
+        document.getElementById("info").innerHTML = sp.prInfo;
+        document.getElementById("RvNumber").innerHTML = " - " + sp.prRvNumber + " đánh giá";
+        document.getElementById("RvNumber_tab").innerHTML = "Đánh giá của khách hàng (" + sp.prRvNumber + ")";
+    </script>
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(function() {
+        $('#header').load('reuseheader.html');
+        $('#footer').load('reusefooter.html');
+        });
+    </script>
+
+</body>
+
+</html>
