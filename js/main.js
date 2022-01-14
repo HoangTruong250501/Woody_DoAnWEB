@@ -145,27 +145,7 @@
 
     /*-------------------
 		Quantity change
-	--------------------- */
-    // var proQty = $('.pro-qty-2');
-    // proQty.prepend('<span class="fa fa-angle-left dec qtybtn"></span>');
-    // proQty.append('<span class="fa fa-angle-right inc qtybtn"></span>');
-    // proQty.on('click', '.qtybtn', function () {
-    //     var $button = $(this);
-    //     var oldValue = $button.parent().find('input').val();
-    //     if ($button.hasClass('inc')) {
-    //         var newVal = parseFloat(oldValue) + 1;
-    //     } else {
-    //         if (oldValue > 1) {
-    //             var newVal = parseFloat(oldValue) - 1;
-    //         } else {
-    //             newVal = 1;
-    //         }
-    //     }
-    //     $button.parent().find('input').val(newVal);
-    //     cartTotal();
-    // });
-    // Total price
-    
+	--------------------- */    
     
     //Add to cart
     var cartQuan = 0
@@ -182,8 +162,8 @@
             var addtrCheckout = document.createElement("tr")
             var cartItem = document.querySelectorAll('.item')
             var cartCount = parseInt(cartCountInfo.innerText) + 1
-            cartCountInfo.textContent = localStorage.getItem('productCount')
             localStorage.setItem('productCount', cartCount)
+            cartCountInfo.textContent = localStorage.getItem('productCount')
             for (var i = 0; i<cartItem.length; i++){
                 var productT = document.querySelectorAll(".title")
                 if(productT[i].innerHTML == productName){
@@ -250,4 +230,4 @@
         });
     });
 
-})
+})(jQuery);
