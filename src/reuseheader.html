@@ -14,11 +14,11 @@
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__option">
             <div class="offcanvas__links" style="margin-left:30px">
-                <a href="#" style="font-size: 30px;"><strong>W  O  O  D  Y</strong></a>
+                <a href="/index.html" style="font-size: 30px;"><strong>W  O  O  D  Y</strong></a>
             </div>
         </div>
         <div class="offcanvas__nav__option">
-            <a href="#" class="search-switch"><img src="/img/icon/search.png" alt=""></a>
+            <a href="/index.html" class="search-switch"><img src="/img/icon/search.png" alt=""></a>
             <a href="/src/user.html"><img src="/img/icon/user.png" alt=""></a>
             <a href="/src/shopping-cart.html"><img src="/img/icon/cart.png" alt=""> <span>0</span></a>
         </div>
@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="/img/Woody.png" alt=""></a>
+                        <a href="/index.html"><img src="/img/Woody.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -99,22 +99,22 @@
         var arrProduct = "shop.html, shop-bed.html, shop-desk.html, shop-seat.html, shop-sofa.html, product-details.html, shop-detail.html";
         var arrCollection = "modern-home-collection.html, seasonal-collection.html, special-collection.html";
 
-        if (link == 'index.html') {
+        if (link === 'index.html'|| fullURL==="https://woodygr09.web.app/") {
             home.className = "active";
             console.log(link);
         }
 
-        if (arrProduct.includes(link)) {
+        if (arrProduct.includes(link)&&link!="") {
             product.className = "active";
             console.log(link);
         }
 
-        if (arrCollection.includes(link)) {
+        if (arrCollection.includes(link)&&link!="") {
             collection.className = "active";
             console.log(link);
         }
 
-        if (link == 'about.html') {
+        if (link === 'about.html') {
             about.className = "active";
             console.log(link);
         }
