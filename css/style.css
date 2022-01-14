@@ -891,7 +891,7 @@ ol {
 }
 
 .categories__deal__countdown span {
-    color: #05ac29;
+    color: #dbd81e;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
@@ -3381,10 +3381,6 @@ ol {
     background: #fe0003;
 }
 
-.blog__details__share ul li a.linkedin {
-    background: #0173b2;
-}
-
 .blog__details__text {
     margin-bottom: 50px;
 }
@@ -3411,7 +3407,7 @@ ol {
     color: #ffffff;
     height: 50px;
     width: 50px;
-    background: #e53637;
+    background: #c2a91c;
     border-radius: 50%;
     line-height: 50px;
     text-align: center;
@@ -3429,7 +3425,7 @@ ol {
 }
 
 .blog__details__quote h6 {
-    color: #e53637;
+    color: #af9317;
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
