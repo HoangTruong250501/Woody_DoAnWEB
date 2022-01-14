@@ -1028,6 +1028,14 @@ ol {
     color: #f7941d;
 }
 
+.product__item.new .product__item__text .rating i {
+    color: #f7941d;
+}
+
+.product__item .product__item__text .rating i {
+    color: #f7941d;
+}
+
 .product__item.sale .product__item__text .rating i:nth-last-child(1) {
     color: #b7b7b7;
 }
@@ -3723,6 +3731,78 @@ ol {
     letter-spacing: 4px;
     padding: 14px 35px;
 }
+
+/*---------------------
+  Team
+-----------------------*/
+/* thiết lập chia cột bằng CSS */
+.column {
+    float: left;
+    width: 20%;
+    margin-bottom: 16px;
+    padding: 0 5px;
+    margin: auto;
+  }
+  
+  /* thiết lập chiều dài cột khi màn hình nhỏ hơn 650px*/
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 1149px) {
+    .column {
+      width: 50%;
+      margin-top: 10px;
+      display: block;
+    }
+  }
+  
+  /* thêm shadow cho class card*/
+  .card__team {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* thêm padding trái và phải*/
+  .container__team {
+    padding: 5px 10px;
+    text-align: center;
+  }
+
+  .container__team .info {
+    text-align: justify;
+    font-size: 14px;
+  }
+  
+  
+  /* Clear floats */
+  .container__team::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title__team{
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: rgb(209, 158, 7);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: rgb(255, 170, 0);
+  }
 
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
