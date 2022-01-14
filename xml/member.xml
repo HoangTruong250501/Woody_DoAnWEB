@@ -1,38 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
     <member>
-        <image>/img/about/team/mongW.png</image>
+        <image>/img/about/team/mongW.jpg</image>
         <name>Thanh Mộng</name>
-        <id>K194111613</id>
-        <birthday>12/03/2001</birthday>
         <position>Quản lý</position>
+        <des>Một người có niềm đam mê kinh doanh, cùng với sự thích thú về đồ nội thất.</des>
+        <email>mongnt19411c@st.uel.edu.vn</email>
+        <fb>https://www.facebook.com/ntm1203/</fb>
     </member>
     <member>
-        <image>/img/about/team/nhungW.png</image>
-        <name>Hồng Nhung</name>
-        <id>K194111620</id>
-        <birthday>30/06/2001</birthday>
-        <position>Bộ phận bán hàng</position>
-    </member>
-    <member>
-        <image>/img/about/team/hoangW.png</image>
+        <image>/img/about/team/hoangW.jpg</image>
         <name>Nhật Hoàng</name>
-        <id>K194111606</id>
-        <birthday>25/05/2001</birthday>
         <position>Bộ phận IT</position>
+        <des>Sở thích lớn nhất là khám phá, tìm tòi về công nghệ. Với kinh nghiệm 3 năm làm việc.</des>
+        <email>hoangtn19411c@st.uel.edu.vn</email>
+        <fb>https://www.facebook.com/nhathoang.truong.92</fb>
     </member>
     <member>
-        <image>/img/about/team/taiW.png</image>
+        <image>/img/about/team/nhungW.jpg</image>
+        <name>Hồng Nhung</name>
+        <position>Bộ phận bán hàng</position>
+        <des>Có kinh nghiệm thực tập ở các công ty lớn, khả năng giao tiếp ứng xử nhạy bén.</des>
+        <email>nhungpth19411c@st.uel.edu.vn</email>
+        <fb>https://www.facebook.com/nhungpham300</fb>
+    </member>
+    <member>
+        <image>/img/about/team/taiW.jpg</image>
         <name>Trí Tài</name>
-        <id>K194111625</id>
-        <birthday>11/08/2001</birthday>
         <position>Bộ phận hỗ trợ</position>
+        <des>Có khả năng lắng nghe và hiểu biết người khác, tính kiên nhẫn tốt.</des>
+        <email>taipt19411c@st.uel.edu.vn</email>
+        <fb>https://www.facebook.com/tritaiphan118</fb>
     </member>
     <member>
-        <image>/img/about/team/vuW.png</image>
+        <image>/img/about/team/vuW.jpg</image>
         <name>Tấn Vũ</name>
-        <id>K194111639</id>
-        <birthday>28/06/2001</birthday>
         <position>Bộ phận kho</position>
+        <des>Tính tình cẩn thận, chu đáo. Mọi thứ phải rõ ràng từ giấy tờ đến con người. </des>
+        <email>vuvt19411c@st.uel.edu.vn</email>
+        <fb>https://www.facebook.com/vuvuong2806</fb>
     </member>
 </root>

@@ -196,7 +196,7 @@
                 const errorCode = error.code; 
                 const errorMessage = error.message; 
                 // alert(errorMessage); 
-                alert("Đăng ký thành công!")
+                alert(errorMessage);
             }); 
         });
 
@@ -209,15 +209,14 @@
           const user = userCredential.user;
 
           alert("Đăng nhập thành công!");
-          location.href="index.html"
+          location.href="index.html";
           // ...
           })
           .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
 
-          alert("Đăng nhập thành công!");
-          location.href="index.html"
+          alert(errorMessage);
           }); 
         });
   </script>

@@ -60,17 +60,6 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row" id="seatProduct" >
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="product__pagination">
-                                <a class="active" href="#">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <span>...</span>
-                                <a href="#">21</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -121,7 +110,7 @@
         function myFunction(array){
             for(i = 0; i < array.Seat.length; i++){
                 var sp = array.Seat[i];
-                html += "<div class='col-lg-4 col-md-6 col-sm-6'><div class='product__item'><div class='product__item__pic set-bg' onClick=detail("+ i + ") ><img src='" + sp.prImage + "'><ul class='product__hover'><li><a href='#'><img src='img/icon/heart.png'></a></li><li><a href='#'><img src='img/icon/compare.png'><span>Đối chiếu</span></a></li><li><a href='#'><img src='img/icon/search.png'></a></li></ul></div><div  class='product__item__text'><h5 style='margin-top : 100px;'>"+ sp.prName +"</h5><a style='margin-top : 40px;' href='#' class='add-cart'>+ Thêm vào giỏ hàng</a><div class='rating'><i class='fa fa-star' ></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star-o'></i></div><h5>"+ sp.prPrice + "đ</h5><div class='product__color__select'><label for='pc-4'><input type='radio' id='pc-4'></label><label class='active black' for='pc-5'><input type='radio' id='pc-5'></label><label class='grey' for='pc-6'><input type='radio' id='pc-6'></label></div></div></div></div>"
+                html += "<div class='col-lg-4 col-md-6 col-sm-6'><div class='product__item'><div class='product__item__pic set-bg' data-setbg="+ sp.prImage + " onClick=detail("+ i + ") ><img style='display: none;' src='" + sp.prImage + "'><ul style='margin-top: 70px;' class='product__hover'><li><a href='#'><img src='img/icon/heart.png'><span>Yêu thích</span></a></li><li><a href='#'><img src='img/icon/search.png'><span onClick=detail("+ i + ")>Chi tiết</span></a></li></ul></div><div  class='product__item__text'><h6>"+ sp.prName +"</h6><a href='#' class='add-cart'>+ Thêm vào giỏ hàng</a><div class='rating'><i class='fa fa-star' ></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star-o'></i></div><h5>"+ sp.prPrice + "đ</h5><div class='product__color__select'><label for='pc-4'><input type='radio' id='pc-4'></label><label class='active black' for='pc-5'><input type='radio' id='pc-5'></label><label class='grey' for='pc-6'><input type='radio' id='pc-6'></label></div></div></div></div>"
             }
             document.getElementById("seatProduct").innerHTML = html; 
         }
