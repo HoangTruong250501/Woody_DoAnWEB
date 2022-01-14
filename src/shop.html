@@ -11,8 +11,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" href=" https://img.icons8.com/ios-filled/50/000000/circled-w.png "/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href=" https://img.icons8.com/ios-filled/50/000000/circled-w.png" />
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
@@ -23,21 +24,21 @@
     <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
-    
+
 
 </head>
 
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
+    <!-- <div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div> -->
 
-        <!-- Header Section Begin -->
-        <header>
-            <div id="header"></div>    
-        </header>
-        <!-- Header Section End -->
+    <!-- Header Section Begin -->
+    <header>
+        <div id="header"></div>
+    </header>
+    <!-- Header Section End -->
 
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-option">
@@ -80,7 +81,8 @@
                                             <div class="shop__sidebar__bedroom">
                                                 <ul style="margin-bottom: -70px;" class="nice-scroll">
                                                     <li><a href="#" class="btn" data-filter="giuong">Giường</a></li>
-                                                    <li><a href="#" class="btn" data-filter="bandaugiuong">Bàn đầu giường</a></li>
+                                                    <li><a href="#" class="btn" data-filter="bandaugiuong">Bàn đầu
+                                                            giường</a></li>
                                                     <li><a href="#" class="btn" data-filter="guong_ngu">Gương</a></li>
                                                     <li><a href="#" class="btn" data-filter="denngu">Đèn ngủ</a></li>
                                                 </ul>
@@ -96,8 +98,10 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__bathroom">
                                                 <ul>
-                                                    <li><a href="#" class="btn" data-filter="bantrangdiem">Bàn trang điểm</a></li>
-                                                    <li><a href="#" class="btn" data-filter="voihoasen">Vòi hoa sen</a></li>
+                                                    <li><a href="#" class="btn" data-filter="bantrangdiem">Bàn trang
+                                                            điểm</a></li>
+                                                    <li><a href="#" class="btn" data-filter="voihoasen">Vòi hoa sen</a>
+                                                    </li>
                                                     <li><a href="#" class="btn" data-filter="bontam">Bồn tắm</a></li>
                                                     <li><a href="#" class="btn" data-filter="guong_tam">Gương</a></li>
                                                 </ul>
@@ -130,10 +134,12 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__kidroom">
                                                 <ul>
-                                                    <li><a href="#" class="btn" data-filter="giuong_treem">Giường</a></li>
+                                                    <li><a href="#" class="btn" data-filter="giuong_treem">Giường</a>
+                                                    </li>
                                                     <li><a href="#" class="btn" data-filter="ban_treem">Bàn/Ghế</a></li>
                                                     <li><a href="#" class="btn" data-filter="tu_treem">Tủ</a></li>
-                                                    <li><a href="#" class="btn" data-filter="trangtri">Dụng cụ trang trí</a></li>
+                                                    <li><a href="#" class="btn" data-filter="trangtri">Dụng cụ trang
+                                                            trí</a></li>
                                                     <li><a href="#" class="btn" data-filter="den_treem">Đèn</a></li>
                                                 </ul>
                                             </div>
@@ -152,7 +158,8 @@
                                                     <li><a href="#" class="btn" data-filter="tuTV">Tủ TV</a></li>
                                                     <li><a href="#" class="btn" data-filter="armchair">Armchair</a></li>
                                                     <li><a href="#" class="btn" data-filter="bannuoc">Bàn nước</a></li>
-                                                    <li><a href="#" class="btn" data-filter="ghemassage">Ghế massage</a></li>
+                                                    <li><a href="#" class="btn" data-filter="ghemassage">Ghế massage</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -201,11 +208,11 @@
     </section>
     <!-- Shop Section End -->
 
-	        <!-- Footer Section Begin -->
-            <footer class="footer">
-                <div id="footer"></div>    
-            </footer>
-            <!-- Footer Section End -->
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div id="footer"></div>
+    </footer>
+    <!-- Footer Section End -->
 
 
 
@@ -230,7 +237,7 @@
         var i;
         var uri = "/json/product.json";
         let myArr;
-        xmlHttp.onreadystatechange = function() {
+        xmlHttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 // var myArr = JSON.parse(this.responseText);
                 myArr = JSON.parse(this.responseText);
@@ -245,7 +252,7 @@
             html = "<div class='product'><div class='row'>";
             for (i = 0; i < array.length; i++) {
                 var sp = array;
-                html += "<div class='col-lg-4 col-md-6 col-sm-6'><div class='product__item'><div class='product__item__pic set-bg' data-setbg="+ sp[i].prImage + " onClick=detail("+ i + ") ><img style='display: none;' src='" + sp[i].prImage + "'><ul style='margin-top: 70px;' class='product__hover'><li><a href='#'><img src='/img/icon/heart.png'><span>Yêu thích</span></a></li><li><a href='#'><img src='/img/icon/search.png'><span onClick=detail("+ i + ")>Chi tiết</span></a></li></ul></div><div  class='product__item__text'><h6>"+ sp[i].prName +"</h6><a href='#' class='add-cart'>+ Thêm vào giỏ hàng</a><div class='rating'><i class='fa fa-star' ></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star-o'></i></div><h5>"+ sp[i].prPrice + "đ</h5><div class='product__color__select'><label for='pc-4'><input type='radio' id='pc-4'></label><label class='active black' for='pc-5'><input type='radio' id='pc-5'></label><label class='grey' for='pc-6'><input type='radio' id='pc-6'></label></div></div></div></div>"
+                html += "<div class='col-lg-4 col-md-6 col-sm-6'><div class='product__item'><div class='product__item__pic set-bg' data-setbg=" + sp[i].prImage + " onClick=detail(" + i + ") ><img style='display: none;' src='" + sp[i].prImage + "'><ul style='margin-top: 70px;' class='product__hover'><li><a href='#'><img src='/img/icon/heart.png'><span>Yêu thích</span></a></li><li><a href='#'><img src='/img/icon/search.png'><span onClick=detail(" + i + ")>Chi tiết</span></a></li></ul></div><div  class='product__item__text'><h6>" + sp[i].prName + "</h6><a href='#' class='add-cart'>+ Thêm vào giỏ hàng</a><div class='rating'><i class='fa fa-star' ></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star-o'></i></div><h5>" + sp[i].prPrice + "đ</h5><div class='product__color__select'><label for='pc-4'><input type='radio' id='pc-4'></label><label class='active black' for='pc-5'><input type='radio' id='pc-5'></label><label class='grey' for='pc-6'><input type='radio' id='pc-6'></label></div></div></div></div>"
                 // html += "<div class='col-lg-4 col-md-6 col-sm-6'><div class='product__item'><div class='product__item__pic set-bg' onClick=detail(" + i + ")><img src='" + sp[i].prImage + "'><ul class='product__hover'><li><a href='#'><img src='img/icon/heart.png'></a></li><li><a href='#'><img src='img/icon/compare.png'><span>Đối chiếu</span></a></li><li><a href='#'><img src='img/icon/search.png'></a></li></ul></div><div class='product__item__text'><h6>"+ sp[i].prName +"</h6><a href='#' class='add-cart'>+ Thêm vào giỏ hàng</a><div class='rating'><i class='fa fa-star' ></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star-o'></i></div><h5>"+ sp[i].prPrice + "đ</h5><div class='product__color__select'><label for='pc-4'><input type='radio' id='pc-4'></label><label class='active black' for='pc-5'><input type='radio' id='pc-5'></label><label class='grey' for='pc-6'><input type='radio' id='pc-6'></label></div></div></div></div>";
             }
             html += "</div></div>";
@@ -260,34 +267,35 @@
         }
 
         //Sort by price
-        function sortby(){
+        function sortby() {
             var sort = document.getElementById("sort");
             var optionsort = sort.value;
             console.log(optionsort);
-            if(optionsort == 1){
+            if (optionsort == 1) {
                 location.href = "/src/shop.html";
-            }else if(optionsort == 2){ //Low to high
-                var sp = myArr.product.sort(function(a,b){
-                    return a.prPrice.slice(0, length-1).split('.').join('') - b.prPrice.slice(0, length-1).split('.').join('');
+            } else if (optionsort == 2) { //Low to high
+                var sp = myArr.product.sort(function (a, b) {
+                    return a.prPrice.slice(0, length - 1).split('.').join('') - b.prPrice.slice(0, length - 1).split('.').join('');
                 });
 
 
                 myFunction(sp);
-            }else if(optionsort == 3){ //high to low
-            var sp = myArr.product.sort(function(a,b){
-                    return b.prPrice.slice(0, length-1).split('.').join('') - a.prPrice.slice(0, length-1).split('.').join('');
+            } else if (optionsort == 3) { //high to low
+                var sp = myArr.product.sort(function (a, b) {
+                    return b.prPrice.slice(0, length - 1).split('.').join('') - a.prPrice.slice(0, length - 1).split('.').join('');
                 });
             }
             myFunction(sp);
         }
 
     </script>
-    
-<script>
-    $(function() {
-    $('#header').load('/src/reuseheader.html');
-    $('#footer').load('/src/reusefooter.html');
-    });
-</script>
+
+    <script>
+        $(function () {
+            $('#header').load('/src/reuseheader.html');
+            $('#footer').load('/src/reusefooter.html');
+        });
+    </script>
 </body>
+
 </html>
