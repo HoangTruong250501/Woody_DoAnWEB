@@ -256,7 +256,93 @@
                     </div>
                 </div>
             </div>
-            <div class="row" id="kq">
+            <div class="row" style="margin-bottom: 50px;" id="kq">
+                <!-- <div class="column" id="kq"> -->
+                    <!-- <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1598930497/face%20image/XzAwOTI1ODEuanBn_iln69n.jpg" alt="Avatar" style="width:300px;height:300px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>John Doe</h1> 
+                            <p>Architect & Engineer</p> 
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old..</p>
+                          </div>
+                        </div>
+                      </div>
+                     <div class="card__team">
+                        <img src="/img/about/team/mongW.jpg"alt="Jane" style="width:100%">
+                        <div class="container__team">
+                            <h4>Nguyễn Thanh Mộng</h4>
+                            <p class="title__team"></p>
+                            <p></p>
+                            <p class="info"></p>
+                            <p>
+                                <form action="">
+                                    <input type="submit" class="button" value="Facebook"></input>
+                                </form>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="/img/about/team/mongW.jpg" alt="Avatar" style="width:300px;height:300px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h4>Thanh Mộng</h4> 
+                            <p class="title__team">Quản lý</p> 
+                            <p>Một người có niềm đam mê kinh doanh, cùng với sự thích thú về đồ nội thất.</p>
+                            <p>K194111613</p>
+                            <p>mongnt19411c@st.uel.edu.vn</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="column">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1598930497/face%20image/XzAwOTI1ODEuanBn_iln69n.jpg" alt="Avatar" style="width:300px;height:300px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>John Doe</h1> 
+                            <p>Architect & Engineer</p> 
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old..</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="column">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1598930497/face%20image/XzAwOTI1ODEuanBn_iln69n.jpg" alt="Avatar" style="width:300px;height:300px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>John Doe</h1> 
+                            <p>Architect & Engineer</p> 
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old..</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="column">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1598930497/face%20image/XzAwOTI1ODEuanBn_iln69n.jpg" alt="Avatar" style="width:300px;height:300px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>John Doe</h1> 
+                            <p>Architect & Engineer</p> 
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old..</p>
+                          </div>
+                        </div>
+                      </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -295,7 +381,8 @@
                 var x = xmlDoc.getElementsByTagName("member");
                 for (i = 0; i < x.length; i++) {
 
-                    html += '<div class="column"><div class="card__team"><img src="'+ x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue +' "alt="Jane" style="width:100%"><div class="container__team"><h4>'+ x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +'</h4><p class="title__team">'+ x[i].getElementsByTagName("position")[0].childNodes[0].nodeValue +'</p><p>'+ x[i].getElementsByTagName("des")[0].childNodes[0].nodeValue +'</p><p class="info">'+ x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +'</p><p><form action="'+ x[i].getElementsByTagName("fb")[0].childNodes[0].nodeValue +'"><input type="submit" class="button" value="Facebook"></input></form></p></div></div></div>'
+                    html += '<div class="column"><div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="'+ x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue +'" alt="Avatar" style="width:300px;height:300px;"></div><div class="flip-card-back"><h4>'+ x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +'</h4><p class="title__team">'+ x[i].getElementsByTagName("position")[0].childNodes[0].nodeValue +'</p> <p>'+ x[i].getElementsByTagName("des")[0].childNodes[0].nodeValue +'</p><p>'+ x[i].getElementsByTagName("id")[0].childNodes[0].nodeValue +'</p><p>'+ x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +'</p></div></div></div></div>'
+                    // html += '<div class="column"><div class="card__team"><img src="'+ x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue +' "alt="Jane" style="width:100%"><div class="container__team"><h4>'+ x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +'</h4><p class="title__team">'+ x[i].getElementsByTagName("position")[0].childNodes[0].nodeValue +'</p><p>'+ x[i].getElementsByTagName("des")[0].childNodes[0].nodeValue +'</p><p class="info">'+ x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +'</p><p><form action="'+ x[i].getElementsByTagName("fb")[0].childNodes[0].nodeValue +'"><input type="submit" class="button" value="Facebook"></input></form></p></div></div></div>'
                 }
             kq.innerHTML = html;
         }
