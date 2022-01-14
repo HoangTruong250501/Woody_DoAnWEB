@@ -297,7 +297,6 @@
 
                     html += '<div class="column"><div class="card__team"><img src="'+ x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue +' "alt="Jane" style="width:100%"><div class="container__team"><h4>'+ x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +'</h4><p class="title__team">'+ x[i].getElementsByTagName("position")[0].childNodes[0].nodeValue +'</p><p>'+ x[i].getElementsByTagName("des")[0].childNodes[0].nodeValue +'</p><p class="info">'+ x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +'</p><p><form action="'+ x[i].getElementsByTagName("fb")[0].childNodes[0].nodeValue +'"><input type="submit" class="button" value="Facebook"></input></form></p></div></div></div>'
                 }
-            
             kq.innerHTML = html;
         }
         xhr.send();
