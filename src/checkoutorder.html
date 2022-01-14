@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Woody | Xác nhận đơn hàng</title>
 
 	<!-- Reuse Header or Footer -->
@@ -10,41 +12,22 @@
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
 		rel="stylesheet">
-
-	<link rel="icon" href=" https://img.icons8.com/ios-filled/50/000000/circled-w.png " />
+	<link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/circled-w.png " />
 
 	<!-- Css Styles -->
-	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-	<link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-	<link rel="stylesheet" href="css/nice-select.css" type="text/css">
-	<link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-	<link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="stylesheet" href="css/checkout_responsive.css" type="text/css">
-	<link rel="stylesheet" href="css/checkout.css" type="text/css">
+	<link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+	<link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
+	<link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+	<link rel="stylesheet" href="/css/nice-select.css" type="text/css">
+	<link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+	<link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+	<link rel="stylesheet" href="/css/style.css" type="text/css">
+	<link rel="stylesheet" href="/css/checkout_responsive.css" type="text/css">
+	<link rel="stylesheet" href="/css/checkout.css" type="text/css">
 </head>
 
 <body onload="addCartCheckout(), checkoutTotal()">
-
-
-	<!-- Offcanvas Menu Begin -->
-	<div class="offcanvas-menu-overlay"></div>
-	<div class="offcanvas-menu-wrapper">
-		<div class="offcanvas__option">
-			<div class="offcanvas__links" style="margin-left:30px">
-				<a href="#" style="font-size: 30px;"><strong>W O O D Y</strong></a>
-			</div>
-		</div>
-		<div class="offcanvas__nav__option">
-			<a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-			<a href="#"><img src="img/icon/user.png" alt=""></a>
-			<a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-		</div>
-		<div id="mobile-menu-wrap"></div>
-	</div>
-	<!-- Offcanvas Menu End -->
 
 	<!-- Header Section Begin -->
 	<header>
@@ -60,7 +43,7 @@
 					<div class="breadcrumb__text">
 						<h4>Xác nhận đơn hàng</h4>
 						<div class="breadcrumb__links">
-							<a href="./shopping-cart.html">Giỏ hàng</a>
+							<a href="/src/shopping-cart.html">Giỏ hàng</a>
 							<span>Đơn hàng</span>
 						</div>
 					</div>
@@ -198,7 +181,7 @@
 									<div class="cart_extra_total_value ml-auto checkoutTotal">$29.90</div>
 								</li>
 							</ul>
-							<div class="checkout_button trans_200"><a href="checkout.html">Hoàn tất thanh toán</a></div>
+							<div class="checkout_button trans_200"><a href="/src/checkout.html">Hoàn tất thanh toán</a></div>
 						</div>
 					</div>
 				</div>
@@ -212,11 +195,11 @@
 	</footer>
 	<!-- Footer Section End -->
 
-	<script src="js/main.js"></script>
+	<script src="/js/main.js"></script>
 	<script>
 		$(function () {
-			$('#header').load('reuseheader.html');
-			$('#footer').load('reusefooter.html');
+			$('#header').load('/src/reuseheader.html');
+			$('#footer').load('/src/reusefooter.html');
 		});
 	</script>
 	<script>

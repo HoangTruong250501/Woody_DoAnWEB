@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Woody | HomePage</title>
+    <title>Woody | Trang chủ</title>
 
     <!-- Reuse Header or Footer -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -225,7 +225,7 @@
                                         <div class="blog__item__text">
                                             <span>01 Tháng 08 2020</span>
                                             <h5>"Chất Liệu Bền Vững"</h5>
-                                            <a href="blog-details.html">Khám phá</a>
+                                            <a href="/src/blog-details.html">Khám phá</a>
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@
                                         <div class="blog__item__text">
                                             <span>20 Tháng 6 2020</span>
                                             <h5>"Tương Lai Mới"</h5>
-                                            <a href="blog-details.html">Khám phá</a>
+                                            <a href="/src/blog-details.html">Khám phá</a>
                                         </div>
                                     </div>
                                 </div>
@@ -245,7 +245,7 @@
                                         <div class="blog__item__text">
                                             <span>18 Tháng 12 2020</span>
                                             <h5>"Lối Sống Khỏe"</h5>
-                                            <a href="blog-details.html">Khám phá</a>
+                                            <a href="/src/blog-details.html">Khám phá</a>
                                         </div>
                                     </div>
                                 </div>
@@ -263,7 +263,7 @@
                                         <div class="blog__item__text">
                                             <span>06 Tháng 08 2021</span>
                                             <h5>"Bếp Màu Sắc"</h5>
-                                            <a href="blog-details.html">Khám phá</a>
+                                            <a href="/src/blog-details.html">Khám phá</a>
                                         </div>
                                     </div>
                                 </div>
@@ -273,7 +273,7 @@
                                         <div class="blog__item__text">
                                             <span>11 Tháng 11 2021</span>
                                             <h5>"Noel Ấm Cúng"</h5>
-                                            <a href="blog-details.html">Khám phá</a>
+                                            <a href="/src/blog-details.html">Khám phá</a>
                                         </div>
                                     </div>
                                 </div>
@@ -283,7 +283,7 @@
                                         <div class="blog__item__text">
                                             <span>20 Tháng 11 2021</span>
                                             <h5>"Gia Đình Ốc Quế"</h5>
-                                            <a href="blog-details.html">Khám phá</a>
+                                            <a href="/src/blog-details.html">Khám phá</a>
                                         </div>
                                     </div>
                                 </div>
@@ -405,27 +405,27 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.nice-select.min.js"></script>
+    <script src="/js/jquery.nicescroll.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/jquery.countdown.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/mixitup.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/main.js"></script>
     <script>
         $(function() {
-        $('#header').load('reuseheader.html');
-        $('#footer').load('reusefooter.html');
+        $('#header').load('/src/reuseheader.html');
+        $('#footer').load('/src/reusefooter.html');
         });
         </script>
         <script>
             var XMLHttp = new XMLHttpRequest();
             var html = "";
             var i;
-            var uri = "json/special-product.json";
+            var uri = "/json/special-product.json";
             let array;
             XMLHttp.onreadystatechange = function(){
                 if (this.readyState == 4 & this.status == 200){
@@ -447,7 +447,7 @@
             function detail(i){
                 var sp = array.special[i];
                 localStorage.setItem("data", JSON.stringify(sp));
-                location.href = "shop-detail.html";
+                location.href = "/src/shop-detail.html";
             }
     
         </script>

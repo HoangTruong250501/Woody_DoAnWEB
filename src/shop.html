@@ -3,24 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Woody | Shop</title>
+    <title>Woody | Sản phẩm</title>
 
     <!-- Reuseheader -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href=" https://img.icons8.com/ios-filled/50/000000/circled-w.png "/>
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
     
 
 </head>
@@ -45,7 +47,7 @@
                     <div class="breadcrumb__text">
                         <h4>Sản phẩm</h4>
                         <div class="breadcrumb__links">
-                            <a href="./index.html">Trang chủ</a>
+                            <a href="/src/index.html">Trang chủ</a>
                             <span>Sản phẩm</span>
                         </div>
                     </div>
@@ -173,7 +175,7 @@
                                 <div class="shop__product__option__right">
                                     <p>Sắp xếp theo giá:</p>
                                     <select onchange="sortby()" id="sort">
-                                        <option selected="selected" value="1">Mặt định</option>
+                                        <option selected="selected" value="1">Mặc định</option>
                                         <option value="2">Thấp đến cao</option>
                                         <option value="3">Cao đến thấp</option>
                                     </select>
@@ -215,8 +217,8 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/jquery.countdown.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script> -->
+    <script src="js/mixitup.min.js"></script> -->
+    <!-- <script src="js/owl.carousel.min.js"></script> -->
     <script src="js/main.js"></script>
     <!-- <script src="js/script.js"></script> -->
 
@@ -243,7 +245,7 @@
             html = "<div class='product'><div class='row'>";
             for (i = 0; i < array.length; i++) {
                 var sp = array;
-                html += "<div class='col-lg-4 col-md-6 col-sm-6'><div class='product__item'><div class='product__item__pic set-bg' data-setbg="+ sp[i].prImage + " onClick=detail("+ i + ") ><img style='display: none;' src='" + sp[i].prImage + "'><ul style='margin-top: 70px;' class='product__hover'><li><a href='#'><img src='img/icon/heart.png'><span>Yêu thích</span></a></li><li><a href='#'><img src='img/icon/search.png'><span onClick=detail("+ i + ")>Chi tiết</span></a></li></ul></div><div  class='product__item__text'><h6>"+ sp[i].prName +"</h6><a href='#' class='add-cart'>+ Thêm vào giỏ hàng</a><div class='rating'><i class='fa fa-star' ></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star-o'></i></div><h5>"+ sp[i].prPrice + "đ</h5><div class='product__color__select'><label for='pc-4'><input type='radio' id='pc-4'></label><label class='active black' for='pc-5'><input type='radio' id='pc-5'></label><label class='grey' for='pc-6'><input type='radio' id='pc-6'></label></div></div></div></div>"
+                html += "<div class='col-lg-4 col-md-6 col-sm-6'><div class='product__item'><div class='product__item__pic set-bg' data-setbg="+ sp[i].prImage + " onClick=detail("+ i + ") ><img style='display: none;' src='" + sp[i].prImage + "'><ul style='margin-top: 70px;' class='product__hover'><li><a href='#'><img src='/img/icon/heart.png'><span>Yêu thích</span></a></li><li><a href='#'><img src='/img/icon/search.png'><span onClick=detail("+ i + ")>Chi tiết</span></a></li></ul></div><div  class='product__item__text'><h6>"+ sp[i].prName +"</h6><a href='#' class='add-cart'>+ Thêm vào giỏ hàng</a><div class='rating'><i class='fa fa-star' ></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star-o'></i></div><h5>"+ sp[i].prPrice + "đ</h5><div class='product__color__select'><label for='pc-4'><input type='radio' id='pc-4'></label><label class='active black' for='pc-5'><input type='radio' id='pc-5'></label><label class='grey' for='pc-6'><input type='radio' id='pc-6'></label></div></div></div></div>"
                 // html += "<div class='col-lg-4 col-md-6 col-sm-6'><div class='product__item'><div class='product__item__pic set-bg' onClick=detail(" + i + ")><img src='" + sp[i].prImage + "'><ul class='product__hover'><li><a href='#'><img src='img/icon/heart.png'></a></li><li><a href='#'><img src='img/icon/compare.png'><span>Đối chiếu</span></a></li><li><a href='#'><img src='img/icon/search.png'></a></li></ul></div><div class='product__item__text'><h6>"+ sp[i].prName +"</h6><a href='#' class='add-cart'>+ Thêm vào giỏ hàng</a><div class='rating'><i class='fa fa-star' ></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star-o'></i></div><h5>"+ sp[i].prPrice + "đ</h5><div class='product__color__select'><label for='pc-4'><input type='radio' id='pc-4'></label><label class='active black' for='pc-5'><input type='radio' id='pc-5'></label><label class='grey' for='pc-6'><input type='radio' id='pc-6'></label></div></div></div></div>";
             }
             html += "</div></div>";
@@ -254,7 +256,7 @@
         function detail(i) {
             var sp = myArr.product[i];
             localStorage.setItem("data", JSON.stringify(sp));
-            location.href = "shop-detail.html";
+            location.href = "/src/shop-detail.html";
         }
 
         //Sort by price
@@ -263,7 +265,7 @@
             var optionsort = sort.value;
             console.log(optionsort);
             if(optionsort == 1){
-                location.href = "shop.html";
+                location.href = "/src/shop.html";
             }else if(optionsort == 2){ //Low to high
                 var sp = myArr.product.sort(function(a,b){
                     return a.prPrice.slice(0, length-1).split('.').join('') - b.prPrice.slice(0, length-1).split('.').join('');
@@ -281,59 +283,10 @@
 
     </script>
     
-    <!-- <script>
-        var XMLHttp = new XMLHttpRequest();
-        var html = "";
-        var i;
-        var url = "json/product.json";
-        let array;
-        XMLHttp.onreadystatechange = function(){
-            if (this.readyState == 4 && this.status == 200){
-                array = JSON.parse(this.responseText);
-                myFunction(array.product);
-            }
-        }
-        XMLHttp.open("GET", url, true);
-        XMLHttp.send();
-
-        function myFunction(array){
-            for(i = 0; i < array.length; i++){
-                var sp = array;
-                html += "<div class='col-lg-4 col-md-6 col-sm-6'><div class='product__item'><div class='product__item__pic set-bg' onClick=detail(" + i + ")><img src='" + sp[i].prImage + "'><ul class='product__hover'><li><a href='#'><img src='img/icon/heart.png'></a></li><li><a href='#'><img src='img/icon/compare.png'><span>Đối chiếu</span></a></li><li><a href='#'><img src='img/icon/search.png'></a></li></ul></div><div class='product__item__text'><h6>"+ sp[i].prName +"</h6><a href='#' class='add-cart'>+ Thêm vào giỏ hàng</a><div class='rating'><i class='fa fa-star' ></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star'></i> <i class='fa fa-star-o'></i></div><h5>"+ sp[i].prPrice + "</h5><div class='product__color__select'><label for='pc-4'><input type='radio' id='pc-4'></label><label class='active black' for='pc-5'><input type='radio' id='pc-5'></label><label class='grey' for='pc-6'><input type='radio' id='pc-6'></label></div></div></div></div>";
-            }
-            document.getElementById("listProduct").innerHTML = html; 
-        }
-
-        function detail(i){
-            var sp = array.product[i];
-            localStorage.setItem("data", JSON.stringify(sp));
-            location.href = "shop-detail.html";
-        }
-
-        function handlesort(){
-            var sort = document.getElementById("sort");
-            var optionsort = sort.value;
-            console.log(optionsort);
-            if(optionsort == 1){
-
-            }else if(optionsort == 2){
-                var sp = array.product.sort(function(a,b){
-                    return a.prPrice - b.prPrice;
-                });
-                myFunction(sp);
-            }else if(optionsort == 3){
-                var sp = array.product.sort(function(a,b){
-                    return b.prPrice - a.prPrice;
-                });
-                myFunction(sp);
-            }
-        }
-    </script> -->
-
 <script>
     $(function() {
-    $('#header').load('reuseheader.html');
-    $('#footer').load('reusefooter.html');
+    $('#header').load('/src/reuseheader.html');
+    $('#footer').load('/src/reusefooter.html');
     });
 </script>
 </body>
