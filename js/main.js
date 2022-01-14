@@ -145,27 +145,7 @@
 
     /*-------------------
 		Quantity change
-	--------------------- */
-    // var proQty = $('.pro-qty-2');
-    // proQty.prepend('<span class="fa fa-angle-left dec qtybtn"></span>');
-    // proQty.append('<span class="fa fa-angle-right inc qtybtn"></span>');
-    // proQty.on('click', '.qtybtn', function () {
-    //     var $button = $(this);
-    //     var oldValue = $button.parent().find('input').val();
-    //     if ($button.hasClass('inc')) {
-    //         var newVal = parseFloat(oldValue) + 1;
-    //     } else {
-    //         if (oldValue > 1) {
-    //             var newVal = parseFloat(oldValue) - 1;
-    //         } else {
-    //             newVal = 1;
-    //         }
-    //     }
-    //     $button.parent().find('input').val(newVal);
-    //     cartTotal();
-    // });
-    // Total price
-    
+	--------------------- */    
     
     //Add to cart
     var cartQuan = 0
@@ -181,7 +161,9 @@
             var addtr = document.createElement("tr")
             var addtrCheckout = document.createElement("tr")
             var cartItem = document.querySelectorAll('.item')
-            cartCountInfo.textContent = parseInt(cartCountInfo.innerText) + 1;
+            var cartCount = parseInt(cartCountInfo.innerText) + 1
+            localStorage.setItem('productCount', cartCount)
+            cartCountInfo.textContent = localStorage.getItem('productCount')
             for (var i = 0; i<cartItem.length; i++){
                 var productT = document.querySelectorAll(".title")
                 if(productT[i].innerHTML == productName){
@@ -190,7 +172,7 @@
                 }
             }
 
-            var Checkout = '<tr><td><div style="float: left; width: 150px;"><img src="'+productImage+'" alt=""></div></td><td><div style="margin-left: 30px; width: 350px;"><p>Tên sản phẩm: <strong>'+productName+'</strong></p><p>Số lượng: <strong>1</strong></p><p>Giá: <strong class="checkout_price">'+productPrice+'</strong></p></div></td></tr>'
+            var Checkout = '<tr class="checkout_item"><td><div style="float: left; width: 150px;"><img src="'+productImage+'" alt=""></div></td><td><div style="margin-left: 30px; width: 350px;"><p>Tên sản phẩm: <strong>'+productName+'</strong></p><p>Số lượng: <strong>1</strong></p><p>Giá: <strong class="checkout_price">'+productPrice+'</strong></p></div></td></tr>'
             addtrCheckout.innerHTML = Checkout
             let htmlsCheckout = '<tr>' + Checkout +'</tr>'
             if (localStorage.getItem('productCheckout')!=null){
@@ -221,12 +203,12 @@
         for (var i = 0; i<cartItem.length; i++){
             var inputValue = cartItem[i].querySelector('.pro-qty-2 input').value
             var productPrice = cartItem[i].querySelector('.cart__price').innerHTML
-            console.log(productPrice)
             total = inputValue * parseFloat(productPrice)
-            console.log(total)
             totalCart = totalCart + total
+            console.log(totalCart)
         }
         var cartTotalSet = document.querySelector('.cart__total_price')
+        console.log(cartTotalSet)
         cartTotalSet.innerHTML = totalCart.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "₫";
         var cartTotalSet1 = document.querySelector('.cart__total_price_ship')
         cartTotalSet1.innerHTML = totalCart.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "₫";

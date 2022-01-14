@@ -3761,7 +3761,11 @@ ol {
   }
   
   /* thêm shadow cho class card*/
+<<<<<<< HEAD
   .card__team {
+=======
+  .card {
+>>>>>>> db3909ddc74edb28837923a17025d55274b9392d
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
   
